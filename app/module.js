@@ -16,9 +16,9 @@ var menubar_component_1 = require('./menubar/menubar.component');
 var footer_component_1 = require('./footer/footer.component');
 var city_selector_component_1 = require('./city-selector/city-selector.component');
 var county_selector_component_1 = require('./county-selector/county-selector.component');
-var dublin_component_1 = require('./dublin/dublin.component');
-var meath_component_1 = require('./meath/meath.component');
-var kildare_component_1 = require('./kildare/kildare.component');
+var dublin_component_1 = require('./county-selector/dublin/dublin.component');
+var meath_component_1 = require('./county-selector/meath/meath.component');
+var kildare_component_1 = require('./county-selector/kildare/kildare.component');
 var AppModule = (function () {
     function AppModule() {
     }

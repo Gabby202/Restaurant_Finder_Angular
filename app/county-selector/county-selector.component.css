@@ -1,0 +1,29 @@
+
+.appContent {
+    color: #00B0FF;
+    font-size: larger;
+    font-weight: bold;
+
+}
+
+#content {
+}
+
+nav {
+  float: left;
+  width: 10%;
+  outline-style: solid;
+}
+
+nav a{
+  display: inline-block;
+}
+
+
+#main {
+  float: right;
+  width: 90%;
+  height: 100%;
+  outline-style: solid;
+
+}
