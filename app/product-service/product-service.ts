@@ -19,6 +19,8 @@ export class ProductService {
             new Product('Ski boots', 'Sports equipment', 150)
 
         ];
+
+        
         return products;
     }
 }

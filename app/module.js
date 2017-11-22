@@ -29,7 +29,7 @@ var AppModule = (function () {
                 router_1.RouterModule.forRoot([
                     { path: 'dublin', component: dublin_component_1.default },
                     { path: 'meath', component: meath_component_1.default },
-                    { path: 'kildare', component: kildare_component_1.default }
+                    { path: 'kildare', component: kildare_component_1.default },
                 ])],
             declarations: [application_component_1.default,
                 menubar_component_1.default, footer_component_1.default, city_selector_component_1.default, county_selector_component_1.default, dublin_component_1.default, meath_component_1.default, kildare_component_1.default, product_item_component_1.default],

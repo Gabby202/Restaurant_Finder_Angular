@@ -12,12 +12,14 @@ import MeathComponent from './county-selector/meath/meath.component';
 import KildareComponent from './county-selector/kildare/kildare.component';
 
 
+
 @NgModule({
     imports: [BrowserModule,
       RouterModule.forRoot([
             { path: 'dublin', component: DublinComponent },
             { path: 'meath', component: MeathComponent },
-            { path: 'kildare', component: KildareComponent }
+            { path: 'kildare', component: KildareComponent },
+
         ])],
     declarations: [ApplicationComponent,
        MenubarComponent, FooterComponent, CitySelectorComponent, CountySelectorComponent, DublinComponent, MeathComponent, KildareComponent, ProductItemComponent],
