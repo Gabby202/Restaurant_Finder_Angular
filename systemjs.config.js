@@ -2,6 +2,7 @@ System.config({
     map: {
         'app':                                'app',
         'rxjs':                               'node_modules/rxjs',
+        '@angular/router':                    'node_modules/@angular/router/bundles/router.umd.js',
         '@angular/core':                      'node_modules/@angular/core/bundles/core.umd.js',
         '@angular/common':                    'node_modules/@angular/common/bundles/common.umd.js',
         '@angular/compiler':                  'node_modules/@angular/compiler/bundles/compiler.umd.js',

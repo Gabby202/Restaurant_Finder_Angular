@@ -1,7 +1,24 @@
 
+<LINK href="application.component.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/application.component.style.js"></script>
+
 <menubar></menubar>
-<h1> Gabby and Agata's Food App!!!</h1>
-<div>
-  <county-selector></county-selector>
+
+<div id = "content">
+
+    <nav>
+
+      <ul>
+        <li><a routerLink="/dublin">Dublin</a></li>
+        <li><a routerLink="/meath">Meath</a></li>
+        <li><a routerLink="/kildare">Kildare</a></li>
+      </ul>
+    </nav>
+
+    <div id = "main">
+        <router-outlet></router-outlet>
+    </div>
+
 </div>
+
 <footer></footer>
