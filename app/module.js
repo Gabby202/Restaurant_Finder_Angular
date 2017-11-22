@@ -14,13 +14,14 @@ var application_component_1 = require('./application/application.component');
 var menubar_component_1 = require('./menubar/menubar.component');
 var footer_component_1 = require('./footer/footer.component');
 var city_selector_component_1 = require('./city-selector/city-selector.component');
+var county_selector_component_1 = require('./county-selector/county-selector.component');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule],
-            declarations: [application_component_1.default, menubar_component_1.default, footer_component_1.default, city_selector_component_1.default],
+            declarations: [application_component_1.default, menubar_component_1.default, footer_component_1.default, city_selector_component_1.default, county_selector_component_1.default],
             bootstrap: [application_component_1.default]
         }), 
         __metadata('design:paramtypes', [])
