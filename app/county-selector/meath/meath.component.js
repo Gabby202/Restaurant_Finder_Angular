@@ -9,13 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var product_service_1 = require('../../product-service/product-service');
 var MeathComponent = (function () {
     function MeathComponent() {
+        this.products = [];
+        var productService = new product_service_1.ProductService();
+        this.products = productService.getProducts();
     }
     MeathComponent = __decorate([
         core_1.Component({
-            template: '<div>Meath Resturaunts</div>',
-            styles: ['div { background-color: lightblue; height: 300px; }']
+            moduleId: module.id,
+            selector: 'meath-resturaunts',
+            templateUrl: 'meath.component.html',
+            styleUrls: ['meath.component.css']
         }), 
         __metadata('design:paramtypes', [])
     ], MeathComponent);

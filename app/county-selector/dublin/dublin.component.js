@@ -9,13 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var product_service_1 = require('../../product-service/product-service');
 var DublinComponent = (function () {
     function DublinComponent() {
+        this.products = [];
+        var productService = new product_service_1.ProductService();
+        this.products = productService.getProducts();
     }
     DublinComponent = __decorate([
         core_1.Component({
-            template: '<div>Dublin Resturaunts</div>',
-            styles: ['div { background-color: orange; height: 300px; }']
+            moduleId: module.id,
+            selector: 'dublin-resturaunts',
+            templateUrl: 'dublin.component.html',
+            styleUrls: ['dublin.component.css']
         }), 
         __metadata('design:paramtypes', [])
     ], DublinComponent);

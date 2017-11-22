@@ -8,21 +8,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-// Implement FooterComponent here.
 var core_1 = require('@angular/core');
-var FooterComponent = (function () {
-    function FooterComponent() {
+var product_service_1 = require('../product-service/product-service');
+var ProductItemComponent = (function () {
+    function ProductItemComponent() {
     }
-    FooterComponent = __decorate([
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', product_service_1.Product)
+    ], ProductItemComponent.prototype, "product", void 0);
+    ProductItemComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'footer',
-            templateUrl: 'footer.component.html'
+            selector: 'osl-product-item',
+            templateUrl: 'product-item.component.html',
+            styleUrls: ['product-item.component.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], FooterComponent);
-    return FooterComponent;
+    ], ProductItemComponent);
+    return ProductItemComponent;
 }());
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = FooterComponent;
-//# sourceMappingURL=footer.component.js.map
+exports.default = ProductItemComponent;
+//# sourceMappingURL=product-item.component.js.map

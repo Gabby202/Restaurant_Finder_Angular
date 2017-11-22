@@ -1,7 +1,18 @@
 import {Component} from '@angular/core';
+import {Product, ProductService} from '../../product-service/product-service';
 
 @Component({
-    template: '<div>Meath Resturaunts</div>',
-    styles:   ['div { background-color: lightblue; height: 300px; }']
+  moduleId: module.id,
+   selector: 'meath-resturaunts',
+   templateUrl: 'meath.component.html',
+   styleUrls:  ['meath.component.css']
 })
-export default class MeathComponent {}
+export default class MeathComponent {
+
+      products: Array<Product> = [];
+
+      constructor() {
+          let productService = new ProductService();
+          this.products = productService.getProducts();
+      }
+}

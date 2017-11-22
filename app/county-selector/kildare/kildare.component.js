@@ -9,13 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var product_service_1 = require('../../product-service/product-service');
 var KildareComponent = (function () {
     function KildareComponent() {
+        this.products = [];
+        var productService = new product_service_1.ProductService();
+        this.products = productService.getProducts();
     }
     KildareComponent = __decorate([
         core_1.Component({
-            template: '<div>Kildare Component</div>',
-            styles: ['div { background-color: coral; height: 300px; }']
+            moduleId: module.id,
+            selector: 'kildare-resturaunts',
+            templateUrl: 'kildare.component.html',
+            styleUrls: ['kildare.component.css']
         }), 
         __metadata('design:paramtypes', [])
     ], KildareComponent);

@@ -3,26 +3,31 @@
     color: #00B0FF;
     font-size: larger;
     font-weight: bold;
-
-}
-
-#content {
 }
 
 nav {
   float: left;
   width: 10%;
   outline-style: solid;
+  position: relative;
+  width: auto;
+  height: 100%
+
+
 }
 
+nav ul {
+  height: 100%;
+}
 nav a{
   display: inline-block;
+  width: auto;
 }
 
 
 #main {
   float: right;
-  width: 90%;
+  width: auto%;
   height: 100%;
   outline-style: solid;
 

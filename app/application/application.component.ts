@@ -5,4 +5,6 @@ import {Component} from '@angular/core';
     selector:    'osl-application',
     templateUrl: 'application.component.html'
 })
-export default class ApplicationComponent {}
+export default class ApplicationComponent {
+
+}
