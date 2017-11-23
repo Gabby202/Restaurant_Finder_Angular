@@ -13,9 +13,13 @@ var product_service_1 = require('../../product-service/product-service');
 var MeathComponent = (function () {
     function MeathComponent() {
         this.products = [];
+        this.productsByType = this.products;
         var productService = new product_service_1.ProductService();
         this.products = productService.getProducts();
     }
+    MeathComponent.prototype.ngOnInit = function () {
+        this.productsByType = this.products.filter(function (product) { return product.category == "TV/Audio"; });
+    };
     MeathComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

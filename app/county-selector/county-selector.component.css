@@ -3,15 +3,16 @@
     color: #00B0FF;
     font-size: larger;
     font-weight: bold;
+
 }
 
 nav {
   float: left;
-  width: 10%;
   outline-style: solid;
   position: relative;
-  width: auto;
-  height: 100%
+  height: 100%;
+  width: 15%;
+
 
 
 }
@@ -27,8 +28,10 @@ nav a{
 
 #main {
   float: right;
-  width: auto%;
+  position: relative;
+  width: 85%;
   height: 100%;
   outline-style: solid;
+
 
 }
