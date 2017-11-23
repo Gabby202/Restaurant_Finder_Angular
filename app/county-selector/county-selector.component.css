@@ -6,32 +6,42 @@
 
 }
 
+
 nav {
   float: left;
   outline-style: solid;
-  position: relative;
-  height: 100%;
-  width: 15%;
-
-
-
+  position: fixed;
+  overflow:hidden;
+  white-space: nowrap;
+  height: 75vh;
+  width: 14%;
 }
 
-nav ul {
-  height: 100%;
+nav ul li {
+  font-size: 20px;
+  padding: 10px 0px;
+  text-align: center;
+  white-space: nowrap;
 }
 nav a{
   display: inline-block;
   width: auto;
 }
+ul {
+  margin: 0;
+  padding: 0;
+}
 
+li {
+  list-style-type: none;
+}
 
 #main {
   float: right;
   position: relative;
+  border-bottom: 10%;
   width: 85%;
   height: 100%;
   outline-style: solid;
-
 
 }

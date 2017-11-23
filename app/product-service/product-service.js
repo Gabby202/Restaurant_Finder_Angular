@@ -21,10 +21,19 @@ var ProductService = (function () {
             new Product('Ski boots', 'dublin', 150),
             new Product('Liverpool shirt', 'kildare', 45),
             new Product('Everton shirt', 'meath', 5),
-            new Product('Bugatti Chiron', 'Auto', 2000000),
+            new Product('Bugatti Chiron', 'dublin', 2000000),
             new Product('65 inch UHDTV', 'kildare', 1800),
             new Product('Carving skis', ' kildare', 350),
-            new Product('Ski boots', 'Sports equipment', 150)
+            new Product('Ski boots', 'dublin', 150),
+            new Product('Ski boots', 'dublin', 150),
+            new Product('Ski boots', 'dublin', 150),
+            new Product('Ski boots', 'dublin', 150),
+            new Product('Ski boots', 'dublin', 150),
+            new Product('Ski boots', 'dublin', 150),
+            new Product('Ski boots', 'dublin', 150),
+            new Product('Ski boots', 'dublin', 150),
+            new Product('Ski boots', 'dublin', 150),
+            new Product('Ski boots', 'dublin', 150),
         ];
         return products;
     };
