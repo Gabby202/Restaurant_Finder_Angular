@@ -9,12 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var product_service_1 = require('../../product-service/product-service');
+var restaurant_service_1 = require('../../restaurant-service/restaurant-service');
 var DublinComponent = (function () {
     function DublinComponent() {
-        this.products = [];
-        var productService = new product_service_1.ProductService();
-        this.products = productService.getProducts();
+        this.restaurants = [];
+        var restaurantService = new restaurant_service_1.RestaurantService();
+        this.restaurants = restaurantService.getRestaurants();
     }
     DublinComponent = __decorate([
         core_1.Component({

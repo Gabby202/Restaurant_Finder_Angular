@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {Product, ProductService} from '../../product-service/product-service';
+import {Component} from '@angular/core';
+import {Restaurant, RestaurantService} from '../../restaurant-service/restaurant-service';
 
 @Component({
   moduleId: module.id,
@@ -7,18 +7,12 @@ import {Product, ProductService} from '../../product-service/product-service';
    templateUrl: 'meath.component.html',
    styleUrls:  ['meath.component.css']
 })
-export default class MeathComponent implements OnInit{
+export default class MeathComponent{
 
-      products: Array<Product> = [];
+  restaurants: Array<Restaurant> = [];
 
-
-      constructor() {
-          let productService = new ProductService();
-          this.products = productService.getProducts();
-
-      }
-    public productsByType = this.products;
-      ngOnInit(){
-        this.productsByType = this.products.filter(product => product.category == "TV/Audio");
-      }
+  constructor() {
+      let restaurantService = new RestaurantService();
+      this.restaurants = restaurantService.getRestaurants();
+  }
 }

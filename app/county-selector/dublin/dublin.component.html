@@ -1,7 +1,7 @@
 <div class="container">
-	<div *ngFor="let p of products">
-		<div *ngIf="p.category == 'dublin'">
-			<osl-product-item [product]="p"></osl-product-item>
+	<div *ngFor="let r of restaurants">
+		<div *ngIf="r.county == 'Dublin'">
+			<osl-restaurant-item [restaurant]="r"></osl-restaurant-item>
 	  </div>
 	</div>
 </div>

@@ -1,18 +1,18 @@
 import {Component} from '@angular/core';
-import {Product, ProductService} from '../../product-service/product-service';
+import {Restaurant, RestaurantService} from '../../restaurant-service/restaurant-service';
 
 @Component({
    moduleId: module.id,
     selector: 'dublin-resturaunts',
     templateUrl: 'dublin.component.html',
-    styleUrls:  ['dublin.component.css'] 
+    styleUrls:  ['dublin.component.css']
 })
 export default class DublinComponent {
 
-    products: Array<Product> = [];
+    restaurants: Array<Restaurant> = [];
 
     constructor() {
-        let productService = new ProductService();
-        this.products = productService.getProducts();
+        let restaurantService = new RestaurantService();
+        this.restaurants = restaurantService.getRestaurants();
     }
 }

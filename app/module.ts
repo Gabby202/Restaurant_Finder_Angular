@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
-import ProductItemComponent from './product-item/product-item.component';
+import RestaurantItemComponent from './restaurant-item/restaurant-item.component';
 import ApplicationComponent from './application/application.component';
 import MenubarComponent from './menubar/menubar.component';
 import FooterComponent from './footer/footer.component';
@@ -21,8 +21,7 @@ import KildareComponent from './county-selector/kildare/kildare.component';
             { path: 'kildare', component: KildareComponent },
 
         ])],
-    declarations: [ApplicationComponent,
-       MenubarComponent, FooterComponent, CitySelectorComponent, CountySelectorComponent, DublinComponent, MeathComponent, KildareComponent, ProductItemComponent],
+    declarations: [ApplicationComponent, MenubarComponent, FooterComponent, CitySelectorComponent, CountySelectorComponent, DublinComponent, MeathComponent, KildareComponent, RestaurantItemComponent],
     bootstrap: [ApplicationComponent]
 })
 export default class AppModule {}
