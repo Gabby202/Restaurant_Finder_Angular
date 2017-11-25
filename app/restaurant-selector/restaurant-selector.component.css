@@ -38,5 +38,6 @@
   .sidebar-nav .navbar li a {
     padding-top: 12px;
     padding-bottom: 12px;
+    font-size:18px;
   }
 }
