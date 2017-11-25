@@ -9,33 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var restaurant_service_1 = require('../../restaurant-service/restaurant-service');
-var DublinComponent = (function () {
-    function DublinComponent() {
-        this.restaurants = [];
-        this.tempRestaurants = [];
-        var restaurantService = new restaurant_service_1.RestaurantService();
-        this.restaurants = restaurantService.getRestaurants();
+var CountySelectorComponent = (function () {
+    function CountySelectorComponent() {
     }
-    DublinComponent.prototype.gaboobie = function (filterValue) {
-        console.log(filterValue);
-        for (var i = 0; i < this.restaurants.length; i++) {
-            if (this.restaurants[i].city == this.filterValue) {
-                this.tempRestaurants.push(this.restaurants[i]);
-            }
-        }
-    };
-    DublinComponent = __decorate([
+    CountySelectorComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'dublin-resturaunts',
-            templateUrl: 'dublin.component.html',
-            styleUrls: ['dublin.component.css']
+            selector: 'county-selector',
+            templateUrl: 'county-selector.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], DublinComponent);
-    return DublinComponent;
+    ], CountySelectorComponent);
+    return CountySelectorComponent;
 }());
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = DublinComponent;
-//# sourceMappingURL=dublin.component.js.map
+exports.default = CountySelectorComponent;
+//# sourceMappingURL=county-selector.component.js.map

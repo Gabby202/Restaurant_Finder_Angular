@@ -1,0 +1,7 @@
+<div class="container">
+	<div *ngFor="let r of restaurants">
+		<div *ngIf="r.county == 'Kildare'">
+			<osl-restaurant-item [restaurant]="r"></osl-restaurant-item>
+	  </div>
+	</div>
+</div>

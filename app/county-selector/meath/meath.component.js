@@ -10,32 +10,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var restaurant_service_1 = require('../../restaurant-service/restaurant-service');
-var DublinComponent = (function () {
-    function DublinComponent() {
+var MeathComponent = (function () {
+    function MeathComponent() {
         this.restaurants = [];
-        this.tempRestaurants = [];
         var restaurantService = new restaurant_service_1.RestaurantService();
         this.restaurants = restaurantService.getRestaurants();
     }
-    DublinComponent.prototype.gaboobie = function (filterValue) {
-        console.log(filterValue);
-        for (var i = 0; i < this.restaurants.length; i++) {
-            if (this.restaurants[i].city == this.filterValue) {
-                this.tempRestaurants.push(this.restaurants[i]);
-            }
-        }
-    };
-    DublinComponent = __decorate([
+    MeathComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'dublin-resturaunts',
-            templateUrl: 'dublin.component.html',
-            styleUrls: ['dublin.component.css']
+            selector: 'meath-resturaunts',
+            templateUrl: 'meath.component.html',
+            styleUrls: ['meath.component.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], DublinComponent);
-    return DublinComponent;
+    ], MeathComponent);
+    return MeathComponent;
 }());
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = DublinComponent;
-//# sourceMappingURL=dublin.component.js.map
+exports.default = MeathComponent;
+//# sourceMappingURL=meath.component.js.map
