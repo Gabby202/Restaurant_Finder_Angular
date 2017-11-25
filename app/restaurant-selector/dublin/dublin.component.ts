@@ -20,11 +20,13 @@ export default class DublinComponent {
 
     gaboobie(filterValue: string): void {
       console.log(filterValue);
+        this.tempRestaurants.length = 0;
       for(var i = 0; i<this.restaurants.length; i++){
-        if(this.restaurants[i].city == this.filterValue){
+        if(this.restaurants[i].city == filterValue){
           this.tempRestaurants.push(this.restaurants[i]);
         }
       }
+
     }
 
 }
