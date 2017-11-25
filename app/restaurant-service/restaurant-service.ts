@@ -7,7 +7,7 @@ export class RestaurantService {
         var restaurants: Array<Restaurant> = [
             new Restaurant("Time Restaurant at Carlton Hotel Blanchardstown", "A La Carte", "average", "Church Road, Tyrrelstown , Blanchardstown, Dublin", "Sun 08:00 AM-09:00 PM", "01 8275600", "Blanchardstown", "Dublin", 4.5, "image0.jpg"),
             new Restaurant("Aqua Restaurant", "Seafood", "expensive", "1 West Pier, Howth, Dublin", "Mon-Sun 01:00 PM-10:00 PM", "01 832 0690", "Howth", "Dublin", 4.5, "image1.jpg"),
-            new Restaurant("Abbey Tavern Loft Bar and Grill", "Grill", "average", "Abbey Street Howth, Dublin", "Mon-Sat 2:00 PM-11:00 PM", "01 8390307", "Howth", "Dublin", 4.5, "image2.jpg"),
+            new Restaurant("Abbey Tavern Loft Bar and Grill", "Grill", "average", "Abbey Street, Dublin", "Mon-Sat 2:00 PM-11:00 PM", "01 8390307", "Howth", "Dublin", 4.5, "image2.jpg"),
             new Restaurant("Cibo Bar and Grill", "Grill", "expensive", "4 East Pier, Howth, Dublin", "Wed-Sun 1:00 PM-10:00 PM", "01 8396344", "Howth", "Dublin", 4, "image3.jpg"),
             new Restaurant("La Banca Ristorante", "Italian", "cheap", "Main Street, Lucan Village, Lucan, Dublin", "Mon-Sat 5:00 PM-12:00 AM", "01 6282400", "Lucan", "Dublin", 3.2, "image4.jpg"),
             new Restaurant("The Foxhunter", "European", "cheap", "Ballydowd Lucan, Lucan, Dublin", "Tues-Sun 2:00 PM-11:00 PM", "01 6262599", "Lucan", "Dublin", 4, "image5.jpg"),
