@@ -1,5 +1,5 @@
 export class Restaurant {
-    constructor(public name: string, public category: string, public price: string, public address: string, public openingHours: string, public contact: string, public city: string, public county: string, public rating: number, public image: string) {}
+    constructor(public name: string, public category: string, public price: string, public address: string, public openingHours: string, public contact: string, public city: string, public county: string, public score: number, public image: string) {}
 }
 
 export class RestaurantService {

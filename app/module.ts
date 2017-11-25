@@ -10,7 +10,7 @@ import CountySelectorComponent from './county-selector/county-selector.component
 import DublinComponent from './county-selector/dublin/dublin.component';
 import MeathComponent from './county-selector/meath/meath.component';
 import KildareComponent from './county-selector/kildare/kildare.component';
-
+import ScoreComponent from './score/score.component';
 
 
 @NgModule({
@@ -21,7 +21,7 @@ import KildareComponent from './county-selector/kildare/kildare.component';
             { path: 'kildare', component: KildareComponent },
 
         ])],
-    declarations: [ApplicationComponent, MenubarComponent, FooterComponent, CitySelectorComponent, CountySelectorComponent, DublinComponent, MeathComponent, KildareComponent, RestaurantItemComponent],
+    declarations: [ApplicationComponent, MenubarComponent, FooterComponent, CitySelectorComponent, CountySelectorComponent, DublinComponent, MeathComponent, KildareComponent, RestaurantItemComponent, ScoreComponent],
     bootstrap: [ApplicationComponent]
 })
 export default class AppModule {}

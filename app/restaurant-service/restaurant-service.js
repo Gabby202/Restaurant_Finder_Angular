@@ -1,6 +1,6 @@
 "use strict";
 var Restaurant = (function () {
-    function Restaurant(name, category, price, address, openingHours, contact, city, county, rating, image) {
+    function Restaurant(name, category, price, address, openingHours, contact, city, county, score, image) {
         this.name = name;
         this.category = category;
         this.price = price;
@@ -9,7 +9,7 @@ var Restaurant = (function () {
         this.contact = contact;
         this.city = city;
         this.county = county;
-        this.rating = rating;
+        this.score = score;
         this.image = image;
     }
     return Restaurant;
