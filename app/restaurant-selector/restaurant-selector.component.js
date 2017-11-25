@@ -15,8 +15,8 @@ var CountySelectorComponent = (function () {
     CountySelectorComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'county-selector',
-            templateUrl: 'county-selector.component.html'
+            selector: 'restaurant-selector',
+            templateUrl: 'restaurant-selector.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], CountySelectorComponent);
@@ -24,4 +24,4 @@ var CountySelectorComponent = (function () {
 }());
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = CountySelectorComponent;
-//# sourceMappingURL=county-selector.component.js.map
+//# sourceMappingURL=restaurant-selector.component.js.map
