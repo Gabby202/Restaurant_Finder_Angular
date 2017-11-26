@@ -2,7 +2,8 @@
   background-color: HotPink;
   overflow-y: scroll;
   width: auto;
-  height:75vh; /*vh is heingt of window*/
+  height:70vh; /*vh is heingt of window*/
+  border-radius: 10px;
 }
 .dropdown{
   padding-bottom:10px;
