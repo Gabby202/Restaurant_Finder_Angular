@@ -13,9 +13,26 @@ var restaurant_service_1 = require('../../restaurant-service/restaurant-service'
 var MeathComponent = (function () {
     function MeathComponent() {
         this.restaurants = [];
+        this.tempRestaurants = [];
         var restaurantService = new restaurant_service_1.RestaurantService();
         this.restaurants = restaurantService.getRestaurants();
     }
+    MeathComponent.prototype.ngOnInit = function () {
+        for (var i = 0; i < this.restaurants.length; i++) {
+            if (this.restaurants[i].county == "Meath") {
+                this.tempRestaurants.push(this.restaurants[i]);
+            }
+        }
+    };
+    MeathComponent.prototype.filter = function (filterValue) {
+        console.log(filterValue);
+        this.tempRestaurants.length = 0;
+        for (var i = 0; i < this.restaurants.length; i++) {
+            if (this.restaurants[i].city == filterValue) {
+                this.tempRestaurants.push(this.restaurants[i]);
+            }
+        }
+    };
     MeathComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

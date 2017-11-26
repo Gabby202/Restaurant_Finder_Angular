@@ -13,9 +13,26 @@ var restaurant_service_1 = require('../../restaurant-service/restaurant-service'
 var KildareComponent = (function () {
     function KildareComponent() {
         this.restaurants = [];
+        this.tempRestaurants = [];
         var restaurantService = new restaurant_service_1.RestaurantService();
         this.restaurants = restaurantService.getRestaurants();
     }
+    KildareComponent.prototype.ngOnInit = function () {
+        for (var i = 0; i < this.restaurants.length; i++) {
+            if (this.restaurants[i].county == "Kildare") {
+                this.tempRestaurants.push(this.restaurants[i]);
+            }
+        }
+    };
+    KildareComponent.prototype.filter = function (filterValue) {
+        console.log(filterValue);
+        this.tempRestaurants.length = 0;
+        for (var i = 0; i < this.restaurants.length; i++) {
+            if (this.restaurants[i].city == filterValue) {
+                this.tempRestaurants.push(this.restaurants[i]);
+            }
+        }
+    };
     KildareComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

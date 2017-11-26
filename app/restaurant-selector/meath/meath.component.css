@@ -20,3 +20,12 @@
 .dropdown-menu{
   width: 100%;
 }
+
+ul li a {
+  font-size:18px;
+}
+
+ul li {
+  font-size:18px;
+
+}
