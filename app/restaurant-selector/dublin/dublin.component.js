@@ -17,7 +17,14 @@ var DublinComponent = (function () {
         var restaurantService = new restaurant_service_1.RestaurantService();
         this.restaurants = restaurantService.getRestaurants();
     }
-    DublinComponent.prototype.gaboobie = function (filterValue) {
+    DublinComponent.prototype.ngOnInit = function () {
+        for (var i = 0; i < this.restaurants.length; i++) {
+            if (this.restaurants[i].county == "Dublin") {
+                this.tempRestaurants.push(this.restaurants[i]);
+            }
+        }
+    };
+    DublinComponent.prototype.filter = function (filterValue) {
         console.log(filterValue);
         this.tempRestaurants.length = 0;
         for (var i = 0; i < this.restaurants.length; i++) {
