@@ -1,0 +1,57 @@
+<div class = "row">
+	<div class = "col-md-3">
+		<div class="dropdown">
+		  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">City
+		  <span class="caret"></span></button>
+		  <ul class="dropdown-menu">
+		    <li  (click)="filter('Trim');"><a routerLink="/meath" >Trim</a></li>
+		    <li><a href="#"></a></li>
+		    <li><a href="#"></a></li>
+		  </ul>
+		</div>
+	</div>
+
+	<div class = "col-md-3">
+		<div class="dropdown">
+		  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Food-Type
+		  <span class="caret"></span></button>
+		  <ul class="dropdown-menu">
+		    <li><a href="#">Seafood</a></li>
+		    <li><a href="#">Grill</a></li>
+		    <li><a href="#">Italian</a></li>
+				<li><a href="#">European</a></li>
+				<li><a href="#">Indian</a></li>
+		  </ul>
+		</div>
+	</div>
+
+	<div class = "col-md-3">
+		<div class="dropdown">
+		  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Price-Range
+		  <span class="caret"></span></button>
+		  <ul class="dropdown-menu">
+		    <li><a href="#">Cheap</a></li>
+		    <li><a href="#">Average</a></li>
+		    <li><a href="#">Expensive</a></li>
+		  </ul>
+		</div>
+	</div>
+
+	<div class = "col-md-3">
+		<div class="dropdown">
+		  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Rating
+		  <span class="caret"></span></button>
+		  <ul class="dropdown-menu">
+		    <li><a href="#">Low to High</a></li>
+		    <li><a href="#">High to Low</a></li>
+		  </ul>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div *ngFor="let r of restaurants">
+		<div *ngIf="r.county == 'Meath'">
+			<osl-restaurant-item [restaurant]="r"></osl-restaurant-item>
+	  </div>
+	</div>
+</div>

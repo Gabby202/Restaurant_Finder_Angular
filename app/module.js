@@ -11,15 +11,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var router_1 = require('@angular/router');
-var product_item_component_1 = require('./product-item/product-item.component');
+var restaurant_item_component_1 = require('./restaurant-item/restaurant-item.component');
 var application_component_1 = require('./application/application.component');
 var menubar_component_1 = require('./menubar/menubar.component');
 var footer_component_1 = require('./footer/footer.component');
 var city_selector_component_1 = require('./city-selector/city-selector.component');
-var county_selector_component_1 = require('./county-selector/county-selector.component');
-var dublin_component_1 = require('./county-selector/dublin/dublin.component');
-var meath_component_1 = require('./county-selector/meath/meath.component');
-var kildare_component_1 = require('./county-selector/kildare/kildare.component');
+var restaurant_selector_component_1 = require('./restaurant-selector/restaurant-selector.component');
+var dublin_component_1 = require('./restaurant-selector/dublin/dublin.component');
+var meath_component_1 = require('./restaurant-selector/meath/meath.component');
+var kildare_component_1 = require('./restaurant-selector/kildare/kildare.component');
+var score_component_1 = require('./score/score.component');
+var home_component_1 = require('./home/home.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -27,12 +29,12 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule,
                 router_1.RouterModule.forRoot([
+                    { path: 'home', component: home_component_1.default },
                     { path: 'dublin', component: dublin_component_1.default },
                     { path: 'meath', component: meath_component_1.default },
                     { path: 'kildare', component: kildare_component_1.default },
                 ])],
-            declarations: [application_component_1.default,
-                menubar_component_1.default, footer_component_1.default, city_selector_component_1.default, county_selector_component_1.default, dublin_component_1.default, meath_component_1.default, kildare_component_1.default, product_item_component_1.default],
+            declarations: [application_component_1.default, menubar_component_1.default, footer_component_1.default, city_selector_component_1.default, restaurant_selector_component_1.default, dublin_component_1.default, meath_component_1.default, kildare_component_1.default, restaurant_item_component_1.default, score_component_1.default, home_component_1.default],
             bootstrap: [application_component_1.default]
         }), 
         __metadata('design:paramtypes', [])
