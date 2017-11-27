@@ -11,17 +11,18 @@ import DublinComponent from './restaurant-selector/dublin/dublin.component';
 import MeathComponent from './restaurant-selector/meath/meath.component';
 import KildareComponent from './restaurant-selector/kildare/kildare.component';
 import ScoreComponent from './score/score.component';
-
+import HomeComponent from './home/home.component';
 
 @NgModule({
     imports: [BrowserModule,
       RouterModule.forRoot([
+            { path: 'home', component: HomeComponent },
             { path: 'dublin', component: DublinComponent },
             { path: 'meath', component: MeathComponent },
             { path: 'kildare', component: KildareComponent },
 
         ])],
-    declarations: [ApplicationComponent, MenubarComponent, FooterComponent, CitySelectorComponent, CountySelectorComponent, DublinComponent, MeathComponent, KildareComponent, RestaurantItemComponent, ScoreComponent],
+    declarations: [ApplicationComponent, MenubarComponent, FooterComponent, CitySelectorComponent, CountySelectorComponent, DublinComponent, MeathComponent, KildareComponent, RestaurantItemComponent, ScoreComponent, HomeComponent],
     bootstrap: [ApplicationComponent]
 })
 export default class AppModule {}

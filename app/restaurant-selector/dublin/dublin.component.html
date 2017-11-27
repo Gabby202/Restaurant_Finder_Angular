@@ -2,15 +2,12 @@
 
 <div class = "row">
 	<div class = "col-md-3">
-		<div class="dropdown">
-		  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">City
-		  <span class="caret"></span></button>
-		  <ul class="dropdown-menu">
-		    <li (click)="filter('Blanchardstown');"><a routerLink="/dublin" >Blanchardstown</a></li>
-		    <li (click)="filter('Howth');"><a routerLink="/dublin" >Howth</a></li>
-		    <li><a href="#">Lucan</a></li>
-		  </ul>
-		</div>
+		<select (change)="filterCity(value)" class= "selectpicker">
+		    <option value="Blanchardstown"><a routerLink="/dublin" >Blanchardstown</a></option>
+		    <option (click)="filterCity('Howth');"><a routerLink="/dublin" >Howth</a></option>
+		    <option (click)="filterCity('Lucan');"><a href="#">Lucan</a></option>
+
+		</select>
 	</div>
 
 	<div class = "col-md-3">
@@ -18,11 +15,11 @@
 		  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Food-Type
 		  <span class="caret"></span></button>
 		  <ul class="dropdown-menu">
-		    <li><a href="#">Seafood</a></li>
-		    <li><a href="#">Grill</a></li>
-		    <li><a href="#">Italian</a></li>
-				<li><a href="#">European</a></li>
-				<li><a href="#">Indian</a></li>
+		    <li><a (click)="filterFood('Seafood');">Seafood</a></li>
+		    <li><a (click)="filterFood('Grill');">Grill</a></li>
+		    <li><a (click)="filterFood('Italian');">Italian</a></li>
+				<li><a (click)="filterFood('European');">European</a></li>
+				<li><a (click)="filterFood('Indian');">Indian</a></li>
 		  </ul>
 		</div>
 	</div>
@@ -32,9 +29,9 @@
 		  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Price-Range
 		  <span class="caret"></span></button>
 		  <ul class="dropdown-menu">
-		    <li><a href="#" >Cheap</a></li>
-		    <li><a href="#">Average</a></li>
-		    <li><a href="#">Expensive</a></li>
+		    <li><a (click)="filterPrice('Cheap');">Cheap</a></li>
+		    <li><a (click)="filterPrice('Average');">Average</a></li>
+		    <li><a (click)="filterPrice('Expensive');">Expensive</a></li>
 		  </ul>
 		</div>
 	</div>
@@ -50,7 +47,10 @@
 		</div>
 	</div>
 </div>
+
+
 <div class="container">
+
 	<div *ngFor="let r of tempRestaurants">
 			<osl-restaurant-item [restaurant]="r"></osl-restaurant-item>
 	  </div>
