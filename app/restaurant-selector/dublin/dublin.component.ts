@@ -11,7 +11,6 @@ export default class DublinComponent implements OnInit{
 
     restaurants: Array<Restaurant> = [];
     tempRestaurants: Array<Restaurant> = [];
-
     constructor() {
         let restaurantService = new RestaurantService();
         this.restaurants = restaurantService.getRestaurants();
@@ -26,7 +25,9 @@ export default class DublinComponent implements OnInit{
       }
     }
 
-    filter(filterValue: string): void {
+    filterCity(filterValue: string): void {
+
+
       console.log(filterValue);
       this.tempRestaurants.length = 0;
       for(var i = 0; i<this.restaurants.length; i++){
@@ -35,5 +36,31 @@ export default class DublinComponent implements OnInit{
         }
       }
     }
+
+    filterFood(filterValue: string): void {
+      console.log(filterValue);
+      this.tempRestaurants.length = 0;
+      for(var i = 0; i<this.restaurants.length; i++){
+        if(this.restaurants[i].category == filterValue){
+            this.tempRestaurants.push(this.restaurants[i]);
+        }
+      }
+    }
+
+    filterPrice(filterValue: string): void {
+      console.log(filterValue);
+      this.tempRestaurants.length = 0;
+      for(var i = 0; i<this.restaurants.length; i++){
+        if(this.restaurants[i].price == filterValue){
+            this.tempRestaurants.push(this.restaurants[i]);
+        }
+      }
+    }
+
+    filterRating(filterValue: string): void {
+
+    }
+
+
 
 }

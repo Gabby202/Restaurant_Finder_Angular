@@ -1,0 +1,8 @@
+.container {
+  background-color: Bisque;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: auto;
+  height:65vh; /*vh is heingt of window*/
+  border-radius: 10px;
+}

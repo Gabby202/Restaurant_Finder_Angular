@@ -24,7 +24,7 @@ var DublinComponent = (function () {
             }
         }
     };
-    DublinComponent.prototype.filter = function (filterValue) {
+    DublinComponent.prototype.filterCity = function (filterValue) {
         console.log(filterValue);
         this.tempRestaurants.length = 0;
         for (var i = 0; i < this.restaurants.length; i++) {
@@ -32,6 +32,26 @@ var DublinComponent = (function () {
                 this.tempRestaurants.push(this.restaurants[i]);
             }
         }
+    };
+    DublinComponent.prototype.filterFood = function (filterValue) {
+        console.log(filterValue);
+        this.tempRestaurants.length = 0;
+        for (var i = 0; i < this.restaurants.length; i++) {
+            if (this.restaurants[i].category == filterValue) {
+                this.tempRestaurants.push(this.restaurants[i]);
+            }
+        }
+    };
+    DublinComponent.prototype.filterPrice = function (filterValue) {
+        console.log(filterValue);
+        this.tempRestaurants.length = 0;
+        for (var i = 0; i < this.restaurants.length; i++) {
+            if (this.restaurants[i].price == filterValue) {
+                this.tempRestaurants.push(this.restaurants[i]);
+            }
+        }
+    };
+    DublinComponent.prototype.filterRating = function (filterValue) {
     };
     DublinComponent = __decorate([
         core_1.Component({

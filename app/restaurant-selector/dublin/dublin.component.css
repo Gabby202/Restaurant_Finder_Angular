@@ -1,8 +1,9 @@
 .container {
   background-color: Bisque;
   overflow-y: scroll;
+  overflow-x: hidden;
   width: auto;
-  height:70vh; /*vh is heingt of window*/
+  height:65vh; /*vh is heingt of window*/
   border-radius: 10px;
 }
 
@@ -12,6 +13,7 @@
 
 .row-fluid {
   display: flex;
+
 }
 
 .btn{
