@@ -1,6 +1,17 @@
+
+.footer .text {
+
+  padding-bottom:8px;
+  overflow:hidden;
+}
+
 .footer {
+    margin-top: 20px;
+    position: absolute;
+    overflow: hidden;
     left: 0;
     bottom: 0;
+    height: 10%;
     width: 100%;
     background-color: gray;
     color: white;

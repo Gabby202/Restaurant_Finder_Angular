@@ -9,25 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var restaurant_service_1 = require('../restaurant-service/restaurant-service');
-var RestaurantItemComponent = (function () {
-    function RestaurantItemComponent() {
+var CountySelectorComponent = (function () {
+    function CountySelectorComponent() {
     }
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', restaurant_service_1.Restaurant)
-    ], RestaurantItemComponent.prototype, "restaurant", void 0);
-    RestaurantItemComponent = __decorate([
+    CountySelectorComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'osl-restaurant-item',
-            templateUrl: 'restaurant-item.component.html',
-            styleUrls: ['restaurant-item.component.css']
+            selector: 'restaurant-selector',
+            templateUrl: 'restaurant-selector.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], RestaurantItemComponent);
-    return RestaurantItemComponent;
+    ], CountySelectorComponent);
+    return CountySelectorComponent;
 }());
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = RestaurantItemComponent;
-//# sourceMappingURL=restaurant-item.component.js.map
+exports.default = CountySelectorComponent;
+//# sourceMappingURL=restaurant-selector.component.js.map

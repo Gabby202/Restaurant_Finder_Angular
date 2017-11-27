@@ -1,0 +1,31 @@
+.container {
+  background-color: IndianRed;
+  overflow-y: scroll;
+  width: auto;
+  height:70vh; /*vh is heingt of window*/
+  border-radius: 10px;
+}
+.dropdown{
+  padding-bottom:10px;
+}
+
+.row-fluid {
+  display: flex;
+}
+
+.btn{
+  width: 100%;
+}
+
+.dropdown-menu{
+  width: 100%;
+}
+
+ul li a {
+  font-size:18px;
+}
+
+ul li {
+  font-size:18px;
+
+}
