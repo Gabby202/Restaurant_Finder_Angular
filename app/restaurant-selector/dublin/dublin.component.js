@@ -16,6 +16,7 @@ var DublinComponent = (function () {
         this.tempRestaurants = [];
         var restaurantService = new restaurant_service_1.RestaurantService();
         this.restaurants = restaurantService.getRestaurants();
+        this.tempRestaurants.length = 0;
     }
     DublinComponent.prototype.ngOnInit = function () {
         for (var i = 0; i < this.restaurants.length; i++) {
@@ -24,6 +25,14 @@ var DublinComponent = (function () {
             }
         }
     };
+    /*filter(cityType: string, foodType: string, priceType: string ): void{
+      var city: string = null;
+      var food: string = null;
+      var price: string = null;
+
+      for(var i = 0; i<this.restaurants.length; i++){
+      if(city != null && )
+    }*/
     DublinComponent.prototype.filterCity = function (filterValue) {
         console.log(filterValue);
         this.tempRestaurants.length = 0;

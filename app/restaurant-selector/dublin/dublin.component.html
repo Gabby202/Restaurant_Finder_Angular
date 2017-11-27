@@ -2,26 +2,23 @@
 
 <div class = "row">
 	<div class = "col-md-3">
-		<select (change)="filterCity(value)" class= "selectpicker">
-		    <option value="Blanchardstown"><a routerLink="/dublin" >Blanchardstown</a></option>
-		    <option (click)="filterCity('Howth');"><a routerLink="/dublin" >Howth</a></option>
-		    <option (click)="filterCity('Lucan');"><a href="#">Lucan</a></option>
+		<select (change)="filterCity($event.target.value, 'city')" class= "selectpicker">
+		    <option ><a routerLink="/dublin" >Blanchardstown</a></option>
+		    <option ><a routerLink="/dublin" >Howth</a></option>
+		    <option ><a routerLink="/dublin" >Lucan</a></option>
 
 		</select>
 	</div>
 
-	<div class = "col-md-3">
-		<div class="dropdown">
-		  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Food-Type
-		  <span class="caret"></span></button>
-		  <ul class="dropdown-menu">
-		    <li><a (click)="filterFood('Seafood');">Seafood</a></li>
-		    <li><a (click)="filterFood('Grill');">Grill</a></li>
-		    <li><a (click)="filterFood('Italian');">Italian</a></li>
-				<li><a (click)="filterFood('European');">European</a></li>
-				<li><a (click)="filterFood('Indian');">Indian</a></li>
-		  </ul>
-		</div>
+	<div class = "row">
+		<div class = "col-md-3">
+		  <select (change)="filterFood($event.target.value)" class= "selectpicker">
+		    <option><a routerLink="/dublin">Seafood</a></option>
+		    <option><a routerLink="/dublin">Grill</a></option>
+		    <option><a routerLink="/dublin">Italian</a></option>
+				<option><a routerLink="/dublin">European</a></option>
+				<option><a routerLink="/dublin">Indian</a></option>
+		  </select>
 	</div>
 
 	<div class = "col-md-3">
