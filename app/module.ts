@@ -16,10 +16,13 @@ import HomeComponent from './home/home.component';
 @NgModule({
     imports: [BrowserModule,
       RouterModule.forRoot([
+            { path: '', component: HomeComponent },
             { path: 'home', component: HomeComponent },
             { path: 'dublin', component: DublinComponent },
             { path: 'meath', component: MeathComponent },
             { path: 'kildare', component: KildareComponent },
+            { path: '**', component: HomeComponent }
+
 
         ])],
     declarations: [ApplicationComponent, MenubarComponent, FooterComponent, CitySelectorComponent, CountySelectorComponent, DublinComponent, MeathComponent, KildareComponent, RestaurantItemComponent, ScoreComponent, HomeComponent],
