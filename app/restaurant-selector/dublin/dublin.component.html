@@ -48,7 +48,9 @@
 
 <div class="container">
 
-	<div *ngFor="let r of tempRestaurants">
-			<osl-restaurant-item [restaurant]="r"></osl-restaurant-item>
+		<div *ngFor="let r of filteredRestaurants">
+			<div *ngIf="r.county == 'Dublin'">
+				<osl-restaurant-item [restaurant]="r"></osl-restaurant-item>
+			</div>
 	  </div>
 	</div>

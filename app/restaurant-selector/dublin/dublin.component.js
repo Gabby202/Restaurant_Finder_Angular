@@ -14,21 +14,24 @@ var DublinComponent = (function () {
     function DublinComponent() {
         this.restaurants = [];
         this.tempRestaurants = [];
+        this.filteredRestaurants = [];
         this.filterArray = [];
         var restaurantService = new restaurant_service_1.RestaurantService();
         this.restaurants = restaurantService.getRestaurants();
         this.cityFilter = "";
+        this.foodFilter = "";
+        this.priceFilter = "";
     }
     DublinComponent.prototype.ngOnInit = function () {
-        for (var i = 0; i < this.restaurants.length; i++) {
-            if (this.restaurants[i].county == "Dublin") {
-                this.tempRestaurants.push(this.restaurants[i]);
-            }
-        }
+        /*      for(var i = 0; i < this.restaurants.length; i++) {
+                if(this.restaurants[i].county == "Dublin") {
+                  this.tempRestaurants.push(this.restaurants[i]);
+                }
+              }*/
     };
     //city id = 1, food = 2 etc...
     DublinComponent.prototype.filter = function (value, id) {
-        //city filter was added
+        //================ city filter was added ========================================
         if (id == 1) {
             this.cityFilter = value;
             this.filterArray.push(value);
@@ -42,16 +45,31 @@ var DublinComponent = (function () {
         }
         else if (id == 2) {
             this.foodFilter = value;
+            this.filterArray.push(value);
+            console.log(value);
+            for (var i = 0; i < this.restaurants.length; i++) {
+                if (this.restaurants[i].category == value) {
+                    console.log("Added: " + this.restaurants[i].name);
+                    this.tempRestaurants.push(this.restaurants[i]);
+                }
+            }
         }
-        else if (id = 3) {
-            thi.priceFilter = value;
+        else if (id == 3) {
+            this.priceFilter = value;
         }
-        //remove items that arent part of filters
-        for (var k = this.tempRestaurants.length - 1; k >= 0; k--) {
-            console.log("index: " + k);
-            if (this.tempRestaurants[k].city != value) {
-                console.log("Spliced: " + this.tempRestaurants[k].name);
-                this.tempRestaurants.splice(k, 1);
+        this.displayRestaurants(this.cityFilter, this.foodFilter, this.priceFilter);
+    };
+    DublinComponent.prototype.displayRestaurants = function (city, food, price) {
+        this.filteredRestaurants.length = 0;
+        for (var i = this.tempRestaurants.length - 1; i >= 0; i--) {
+            if (this.tempRestaurants[i].city == city) {
+                this.filteredRestaurants.push(this.tempRestaurants[i]);
+            }
+            if (this.tempRestaurants[i].category == food) {
+                this.filteredRestaurants.push(this.tempRestaurants[i]);
+            }
+            if (this.tempRestaurants[i].price == price) {
+                this.filteredRestaurants.push(this.tempRestaurants[i]);
             }
         }
     };
@@ -63,46 +81,12 @@ var DublinComponent = (function () {
         this.priceFilter = "";
     };
     DublinComponent.prototype.remove = function () {
-        this.tempRestaurants.splice(this.tempRestaurants.length - 1, 1);
+        this.filteredRestaurants.splice(this.tempRestaurants.length - 1, 1);
     };
     DublinComponent.prototype.displayArray = function () {
-        if (this.tempRestaurants.length > 0) {
-            for (var i = 0; i < this.tempRestaurants.length; i++) {
-                console.log("array item " + i + ": " + this.tempRestaurants[i].name);
-            }
+        for (var i = 0; i < this.filteredRestaurants.length; i++) {
+            console.log("array item " + i + ": " + this.filteredRestaurants[i].name);
         }
-        else {
-            console.log("Array is empty");
-        }
-    };
-    DublinComponent.prototype.filterCity = function (filterValue) {
-        console.log(filterValue);
-        this.tempRestaurants.length = 0;
-        for (var i = 0; i < this.restaurants.length; i++) {
-            if (this.restaurants[i].city == filterValue) {
-                this.tempRestaurants.push(this.restaurants[i]);
-            }
-        }
-    };
-    DublinComponent.prototype.filterFood = function (filterValue) {
-        console.log(filterValue);
-        this.tempRestaurants.length = 0;
-        for (var i = 0; i < this.restaurants.length; i++) {
-            if (this.restaurants[i].category == filterValue) {
-                this.tempRestaurants.push(this.restaurants[i]);
-            }
-        }
-    };
-    DublinComponent.prototype.filterPrice = function (filterValue) {
-        console.log(filterValue);
-        this.tempRestaurants.length = 0;
-        for (var i = 0; i < this.restaurants.length; i++) {
-            if (this.restaurants[i].price == filterValue) {
-                this.tempRestaurants.push(this.restaurants[i]);
-            }
-        }
-    };
-    DublinComponent.prototype.filterRating = function (filterValue) {
     };
     DublinComponent = __decorate([
         core_1.Component({
