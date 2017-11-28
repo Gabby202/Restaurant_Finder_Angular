@@ -24,6 +24,24 @@ var DublinComponent = (function () {
             }
         }
     };
+    DublinComponent.prototype.filter = function (value) {
+        console.log(value);
+        for (var i = 0; i < this.restaurants.length; i++) {
+            if (this.restaurants[i].city == value ||
+                this.restaurants[i].category == value ||
+                this.restaurants[i].price == value) {
+                this.tempRestaurants.push(this.restaurants[i]);
+            }
+        }
+    };
+    DublinComponent.prototype.remove = function () {
+        this.tempRestaurants.splice(this.tempRestaurants.length - 1, 1);
+    };
+    DublinComponent.prototype.displayArray = function () {
+        for (var i = 0; i < this.tempRestaurants.length; i++) {
+            console.log("array item " + i + ": " + this.tempRestaurants[i].name);
+        }
+    };
     DublinComponent.prototype.filterCity = function (filterValue) {
         console.log(filterValue);
         this.tempRestaurants.length = 0;

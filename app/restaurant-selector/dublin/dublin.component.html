@@ -2,27 +2,24 @@
 
 <div class = "row">
 	<div class = "col-md-3">
-		<select (change)="filterCity(value)" class= "selectpicker">
-		    <option value="Blanchardstown"><a routerLink="/dublin" >Blanchardstown</a></option>
-		    <option (click)="filterCity('Howth');"><a routerLink="/dublin" >Howth</a></option>
-		    <option (click)="filterCity('Lucan');"><a href="#">Lucan</a></option>
+		<select (change)="filter($event.target.value)" class= "selectpicker">
+			 <option><a routerLink="/dublin" >Select City</a></option>
+		    <option><a routerLink="/dublin" >Blanchardstown</a></option>
+		    <option><a routerLink="/dublin" >Howth</a></option>
+		    <option><a routerLink="/dublin">Lucan</a></option>
 
 		</select>
 	</div>
 
 	<div class = "col-md-3">
-		<div class="dropdown">
-		  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Food-Type
-		  <span class="caret"></span></button>
-		  <ul class="dropdown-menu">
-		    <li><a (click)="filterFood('Seafood');">Seafood</a></li>
-		    <li><a (click)="filterFood('Grill');">Grill</a></li>
-		    <li><a (click)="filterFood('Italian');">Italian</a></li>
-				<li><a (click)="filterFood('European');">European</a></li>
-				<li><a (click)="filterFood('Indian');">Indian</a></li>
-		  </ul>
-		</div>
+		<select (change)="filter($event.target.value)" class= "selectpicker">
+				<option><a routerLink="/dublin" >Select Foot Type</a></option>
+			  <option><a routerLink="/dublin" >Seafood</a></option>
+		    <option><a routerLink="/dublin" >Grill</a></option>
+		    <option><a routerLink="/dublin">Italian</a></option>
+		</select>
 	</div>
+
 
 	<div class = "col-md-3">
 		<div class="dropdown">
@@ -48,6 +45,8 @@
 	</div>
 </div>
 
+<button (click) = "displayArray();">Display array to console</button>
+<button (click) = "remove();">splice last element</button>
 
 <div class="container">
 
