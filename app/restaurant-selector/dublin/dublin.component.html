@@ -2,10 +2,12 @@
 
 <div class = "row">
 	<div class = "col-md-3">
-		<select (change)="filterCity($event.target.value, 'city')" class= "selectpicker">
-		    <option ><a routerLink="/dublin" >Blanchardstown</a></option>
-		    <option ><a routerLink="/dublin" >Howth</a></option>
-		    <option ><a routerLink="/dublin" >Lucan</a></option>
+		<select (change)="filterCity($event.target.value)" class= "selectpicker">
+			  <option selected="selected"><a href="#" >All</a></option>
+		    <option ><a href="#" >Blanchardstown</a></option>
+		    <option ><a href="#" >Howth</a></option>
+		    <option ><a href="#" >Lucan</a></option>
+
 
 		</select>
 	</div>
@@ -13,11 +15,13 @@
 	<div class = "row">
 		<div class = "col-md-3">
 		  <select (change)="filterFood($event.target.value)" class= "selectpicker">
-		    <option><a routerLink="/dublin">Seafood</a></option>
-		    <option><a routerLink="/dublin">Grill</a></option>
-		    <option><a routerLink="/dublin">Italian</a></option>
-				<option><a routerLink="/dublin">European</a></option>
-				<option><a routerLink="/dublin">Indian</a></option>
+				<option selected="selected"><a a href="#" >All</a></option>
+		    <option><a a href="#">A La Carte</a></option>
+		    <option><a a href="#">Grill</a></option>
+		    <option><a a href="#">Italian</a></option>
+				<option><a a href="#">European</a></option>
+				<option><a a href="#">Seafood</a></option>
+
 		  </select>
 	</div>
 
@@ -26,6 +30,7 @@
 		  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Price-Range
 		  <span class="caret"></span></button>
 		  <ul class="dropdown-menu">
+				<option selected="selected"><a href="#" >Any</a></option>
 		    <li><a (click)="filterPrice('Cheap');">Cheap</a></li>
 		    <li><a (click)="filterPrice('Average');">Average</a></li>
 		    <li><a (click)="filterPrice('Expensive');">Expensive</a></li>
@@ -38,6 +43,7 @@
 		  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Rating
 		  <span class="caret"></span></button>
 		  <ul class="dropdown-menu">
+				<option selected="selected"><a href="#" >Any</a></option>
 		    <li><a href="#">Low to High</a></li>
 		    <li><a href="#">High to Low</a></li>
 		  </ul>

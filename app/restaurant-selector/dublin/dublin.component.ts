@@ -16,34 +16,34 @@ export default class DublinComponent implements OnInit{
     constructor() {
         let restaurantService = new RestaurantService();
         this.restaurants = restaurantService.getRestaurants();
-        this.tempRestaurants.length = 0;
+
     }
 
     ngOnInit() {
       for(var i = 0; i < this.restaurants.length; i++) {
         if(this.restaurants[i].county == "Dublin") {
-          this.tempRestaurants.push(this.restaurants[i]);
+
+          this.tempRestaurants.length = 0;
         }
       }
     }
 
-    /*filter(cityType: string, foodType: string, priceType: string ): void{
-      var city: string = null;
-      var food: string = null;
-      var price: string = null;
 
-      for(var i = 0; i<this.restaurants.length; i++){
-      if(city != null && )
-    }*/
+
+
 
     filterCity(filterValue: string): void {
       console.log(filterValue);
-      this.tempRestaurants.length = 0;
+
       for(var i = 0; i<this.restaurants.length; i++){
-        if(this.restaurants[i].city == filterValue){
+        if(this.restaurants[i].city == filterValue || filterValue == "All"){
             this.tempRestaurants.push(this.restaurants[i]);
+        }else{
+          this.tempRestaurants.splice(i, 1);
         }
+        console.log(filterValue);
       }
+
     }
 
     filterFood(filterValue: string): void {
