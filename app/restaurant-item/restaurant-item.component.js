@@ -13,6 +13,9 @@ var restaurant_service_1 = require('../restaurant-service/restaurant-service');
 var RestaurantItemComponent = (function () {
     function RestaurantItemComponent() {
     }
+    RestaurantItemComponent.prototype.ngOnInit = function () {
+        this.imgUrl = 'app/images/' + this.restaurant.id + '.jpg';
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', restaurant_service_1.Restaurant)

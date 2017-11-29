@@ -1,11 +1,25 @@
-<div class="restaurantItem">
-	<h3>{{ restaurant.name }}</h3>
-	<div>Category: {{ restaurant.category }}</div>
-	<div>Price:  {{ restaurant.price }}</div>
-	<div>Address: {{ restaurant.address }}</div>
-	<div>Opening Hours:  {{ restaurant.openingHours }}</div>
-	<div>contact:  {{ restaurant.contact }}</div>
-	<div>City:  {{ restaurant.city }}</div>
-	<div>County:  {{ restaurant.county }}</div>
-	<div>Rating:  {{ restaurant.score }}<score [score] = "restaurant.score"></score></div>
+<div class = "restaurantItem">
+	<div class="container">
+	  <div class="row">
+	    <div class="col-md-3">
+				<div class = "imageArea">
+					<div><img [src] = 'imgUrl' alt='{{restaurant.name}}'></div>
+				</div>
+			</div>
+
+	    <div class="col-md*-9">
+				<div class = "detailsArea">
+					<h3>{{ restaurant.name }}</h3>
+					<div>Category: {{ restaurant.category }}</div>
+					<div>Price:  {{ restaurant.price }}</div>
+					<div>Address: {{ restaurant.address }}</div>
+					<div>Opening Hours:  {{ restaurant.openingHours }}</div>
+					<div>contact:  {{ restaurant.contact }}</div>
+					<div>City:  {{ restaurant.city }}</div>
+					<div>County:  {{ restaurant.county }}</div>
+					<div>Rating:  {{ restaurant.score }}<score [score] = "restaurant.score"></score></div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

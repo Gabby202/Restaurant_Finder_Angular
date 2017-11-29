@@ -23,11 +23,11 @@ var DublinComponent = (function () {
         this.priceFilter = "";
     }
     DublinComponent.prototype.ngOnInit = function () {
-        /*      for(var i = 0; i < this.restaurants.length; i++) {
-                if(this.restaurants[i].county == "Dublin") {
-                  this.tempRestaurants.push(this.restaurants[i]);
-                }
-              }*/
+        for (var i = 0; i < this.restaurants.length; i++) {
+            if (this.restaurants[i].county == "Dublin") {
+                this.filteredRestaurants.push(this.restaurants[i]);
+            }
+        }
     };
     //city id = 1, food = 2 etc...
     DublinComponent.prototype.filter = function (value, id) {

@@ -28,11 +28,11 @@ export default class DublinComponent implements OnInit{
     }
 
     ngOnInit() {
-/*      for(var i = 0; i < this.restaurants.length; i++) {
+      for(var i = 0; i < this.restaurants.length; i++) {
         if(this.restaurants[i].county == "Dublin") {
-          this.tempRestaurants.push(this.restaurants[i]);
+          this.filteredRestaurants.push(this.restaurants[i]);
         }
-      }*/
+      }
     }
 
     //city id = 1, food = 2 etc...
@@ -93,7 +93,7 @@ export default class DublinComponent implements OnInit{
 
       for(var i = this.tempRestaurants.length-1; i >= 0; i--) {
 
-        
+
         if(this.tempRestaurants[i].city == city) {
           this.filteredRestaurants.push(this.tempRestaurants[i]);
         }
