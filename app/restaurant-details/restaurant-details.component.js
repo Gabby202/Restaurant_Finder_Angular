@@ -21,8 +21,8 @@ var RestaurantDetailsComponent = (function () {
     RestaurantDetailsComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.sub = this.route.params.subscribe(function (params) {
-            _this.name = params['name']; // (+) converts string 'id' to a number
-            console.log(_this.name);
+            _this.id = params['id']; // (+) converts string 'id' to a number
+            console.log('' + _this.id);
             // In a real app: dispatch action to load the details here.
         });
     };
@@ -31,6 +31,7 @@ var RestaurantDetailsComponent = (function () {
             moduleId: module.id,
             selector: 'restaurant-details',
             templateUrl: 'restaurant-details.component.html',
+            styleUrls: ['restaurant-details.component.css']
         }), 
         __metadata('design:paramtypes', [router_1.ActivatedRoute])
     ], RestaurantDetailsComponent);

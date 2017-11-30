@@ -23,7 +23,7 @@ import RestaurantDetailsComponent from './restaurant-details/restaurant-details.
             { path: 'dublin', component: DublinComponent },
             { path: 'meath', component: MeathComponent },
             { path: 'kildare', component: KildareComponent },
-            { path: 'restaurant-details/:name', component: RestaurantDetailsComponent},
+            { path: 'restaurant-details/:id', component: RestaurantDetailsComponent},
             { path: '**', component: HomeComponent }
 
 

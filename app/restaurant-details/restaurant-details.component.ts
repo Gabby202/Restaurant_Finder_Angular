@@ -8,6 +8,7 @@ import {ActivatedRoute} from '@angular/router';
     moduleId:     module.id,
     selector:    'restaurant-details',
     templateUrl: 'restaurant-details.component.html',
+    styleUrls:  ['restaurant-details.component.css']
 
 
 })
@@ -15,19 +16,19 @@ export default class RestaurantDetailsComponent implements OnInit{
 
   restaurants: Array<Restaurant> = [];
 
-  public name: string;
+  public id: number;
   private sub: any;
 
   constructor(private route: ActivatedRoute) {
-    
+
     let restaurantService = new RestaurantService();
     this.restaurants = restaurantService.getRestaurants();
 }
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
-       this.name = params['name']; // (+) converts string 'id' to a number
-       console.log(this.name);
+       this.id = params['id']; // (+) converts string 'id' to a number
+       console.log(''+this.id);
 
 
        // In a real app: dispatch action to load the details here.

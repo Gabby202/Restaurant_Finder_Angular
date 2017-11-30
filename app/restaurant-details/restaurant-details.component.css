@@ -1,0 +1,16 @@
+.container {
+  width:1000px;
+}
+
+.review{
+  height: 400px;
+  width: 100%;
+  border-style: solid;
+  border-radius: 10px;
+}
+
+.rating {
+  height:400px;
+  width:100%;
+
+}
