@@ -10,10 +10,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var restaurant_service_1 = require('../restaurant-service/restaurant-service');
+var review_tracker_service_1 = require('../review-tracker-service/review-tracker-service');
 var RestaurantItemComponent = (function () {
-    function RestaurantItemComponent() {
+    function RestaurantItemComponent(reviewService) {
+        this.reviewService = reviewService;
     }
     RestaurantItemComponent.prototype.ngOnInit = function () {
+        this.reviewService.log("RestaurantItem initialized for Restaurant " + this.restaurant.name);
         this.imgUrl = 'app/images/' + this.restaurant.id + '.jpg';
     };
     __decorate([
@@ -25,9 +28,10 @@ var RestaurantItemComponent = (function () {
             moduleId: module.id,
             selector: 'osl-restaurant-item',
             templateUrl: 'restaurant-item.component.html',
-            styleUrls: ['restaurant-item.component.css']
+            styleUrls: ['restaurant-item.component.css'],
+            providers: [review_tracker_service_1.ReviewService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [review_tracker_service_1.ReviewService])
     ], RestaurantItemComponent);
     return RestaurantItemComponent;
 }());

@@ -13,6 +13,7 @@ import KildareComponent from './restaurant-selector/kildare/kildare.component';
 import ScoreComponent from './score/score.component';
 import HomeComponent from './home/home.component';
 import RestaurantDetailsComponent from './restaurant-details/restaurant-details.component';
+import ReviewComponent from './review/review.component'
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import RestaurantDetailsComponent from './restaurant-details/restaurant-details.
 
 
         ])],
-    declarations: [ApplicationComponent, MenubarComponent, FooterComponent, CitySelectorComponent, CountySelectorComponent, DublinComponent, MeathComponent, KildareComponent, RestaurantItemComponent, ScoreComponent, HomeComponent, RestaurantDetailsComponent],
+    declarations: [ApplicationComponent, MenubarComponent, FooterComponent, CitySelectorComponent, CountySelectorComponent, DublinComponent, MeathComponent, KildareComponent, RestaurantItemComponent, ScoreComponent, HomeComponent, RestaurantDetailsComponent, ReviewComponent],
     bootstrap: [ApplicationComponent]
 })
 export default class AppModule {}
