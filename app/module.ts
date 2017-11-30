@@ -12,6 +12,8 @@ import MeathComponent from './restaurant-selector/meath/meath.component';
 import KildareComponent from './restaurant-selector/kildare/kildare.component';
 import ScoreComponent from './score/score.component';
 import HomeComponent from './home/home.component';
+import RestaurantDetailsComponent from './restaurant-details/restaurant-details.component';
+
 
 @NgModule({
     imports: [BrowserModule,
@@ -21,11 +23,13 @@ import HomeComponent from './home/home.component';
             { path: 'dublin', component: DublinComponent },
             { path: 'meath', component: MeathComponent },
             { path: 'kildare', component: KildareComponent },
+            { path: 'restaurant-details/:name', component: RestaurantDetailsComponent},
             { path: '**', component: HomeComponent }
 
 
+
         ])],
-    declarations: [ApplicationComponent, MenubarComponent, FooterComponent, CitySelectorComponent, CountySelectorComponent, DublinComponent, MeathComponent, KildareComponent, RestaurantItemComponent, ScoreComponent, HomeComponent],
+    declarations: [ApplicationComponent, MenubarComponent, FooterComponent, CitySelectorComponent, CountySelectorComponent, DublinComponent, MeathComponent, KildareComponent, RestaurantItemComponent, ScoreComponent, HomeComponent, RestaurantDetailsComponent],
     bootstrap: [ApplicationComponent]
 })
 export default class AppModule {}

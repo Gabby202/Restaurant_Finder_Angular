@@ -1,57 +1,55 @@
+
+
 <div class = "row">
 	<div class = "col-md-3">
-		<div class="dropdown">
-		  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">City
-		  <span class="caret"></span></button>
-		  <ul class="dropdown-menu">
-		    <li><a href="#">Blanchardstown</a></li>
-		    <li><a href="#">Howth</a></li>
-		    <li><a href="#">Lucan</a></li>
-		  </ul>
-		</div>
+		<select (change)="filter($event.target.value, 1)" class= "selectpicker">
+			 <option>Select City</option>
+		    <option>Blanchardstown</option>
+		    <option>Howth</option>
+		    <option>Lucan</option>
+		</select>
 	</div>
 
 	<div class = "col-md-3">
-		<div class="dropdown">
-		  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Food-Type
-		  <span class="caret"></span></button>
-		  <ul class="dropdown-menu">
-		    <li><a href="#">Seafood</a></li>
-		    <li><a href="#">Grill</a></li>
-		    <li><a href="#">Italian</a></li>
-				<li><a href="#">European</a></li>
-				<li><a href="#">Indian</a></li>
-		  </ul>
-		</div>
+		<select (change)="filter($event.target.value, 2)" class= "selectpicker">
+			 <option>Select Food</option>
+		    <option>Seafood</option>
+		    <option>Grill</option>
+		    <option>Italian</option>
+		</select>
+	</div>
+
+
+	<div class = "col-md-3">
+		<select (change)="filter($event.target.value, 3)" class= "selectpicker">
+			 <option>Select Price</option>
+		    <option>Cheap</option>
+		    <option>Average</option>
+		    <option>Expensive</option>
+		</select>
 	</div>
 
 	<div class = "col-md-3">
-		<div class="dropdown">
-		  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Price-Range
-		  <span class="caret"></span></button>
-		  <ul class="dropdown-menu">
-		    <li><a href="#">Cheap</a></li>
-		    <li><a href="#">Average</a></li>
-		    <li><a href="#">Expensive</a></li>
-		  </ul>
-		</div>
-	</div>
-
-	<div class = "col-md-3">
-		<div class="dropdown">
-		  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Rating
-		  <span class="caret"></span></button>
-		  <ul class="dropdown-menu">
-		    <li><a href="#">Low to High</a></li>
-		    <li><a href="#">High to Low</a></li>
-		  </ul>
-		</div>
+		<select (change)="filter($event.target.value)" class= "selectpicker">
+			 <option>Select Rating</option>
+		    <option>Low to High</option>
+		    <option>High to Low</option>
+		</select>
 	</div>
 </div>
+<div>City: {{cityFilter}} </div>
+<div>Food-Type: {{foodFilter}}</div>
+<div>Price: {{priceFilter}}</div>
+<button (click) = "displayArray();">Display array to console</button>
+<button (click) = "remove();">splice last element</button>
+<button (click) = "clear();">Clear all filters</button>
+
+
 <div class="container">
-	<div *ngFor="let r of restaurants">
-		<div *ngIf="r.county == 'Kildare'">
-			<osl-restaurant-item [restaurant]="r"></osl-restaurant-item>
+
+		<div *ngFor="let r of filteredRestaurants">
+			<div *ngIf="r.county == 'Dublin'">
+				<osl-restaurant-item [restaurant]="r"></osl-restaurant-item>
+			</div>
 	  </div>
 	</div>
-</div>

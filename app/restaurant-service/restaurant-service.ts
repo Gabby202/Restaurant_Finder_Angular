@@ -1,6 +1,8 @@
 export class Restaurant {
     constructor(public id:number ,public name: string, public category: string, public price: string, public address: string, public openingHours: string, public contact: string, public city: string, public county: string, public score: number, public image: string) {}
+
 }
+
 
 export class RestaurantService {
     getRestaurants(): Array<Restaurant> {
@@ -13,7 +15,12 @@ export class RestaurantService {
             new Restaurant(5,"The Foxhunter", "European", "Cheap", "Ballydowd Lucan, Lucan, Dublin", "Tues-Sun 2:00 PM-11:00 PM", "01 6262599", "Lucan", "Dublin", 4, "image5.jpg"),
             new Restaurant(6,"Khans Spices Trim", "Indian", "Cheap", "Emmet Street Trim, Meath", "Mon-Sun 2:00 PM-1:00 AM", "046 9437696", "Trim", "Meath", 5, "image6.jpg"),
             new Restaurant(7,"La Scala", "Italian", "Average", "Emmet House, Finnegans Way, Trim, Meath", "Mon-Fri 12:00 AM-11:00 PM", "046 948323", "Trim", "Meath", 4.2, "image7.jpg"),
-    //        new Restaurant("La Scala", "Italian", "Average", "Emmet House, Finnegans Way, Trim, Meath", "Mon-Fri 12:00 AM-11:00 PM", "046 948323", "Trim", "Meath", 4.2, "image7.jpg"),
+            new Restaurant(8,"Lees Oriental Restaurant", "Chinese", "cheap", "The Coachyard, Enfield, Meath", "Mon-Sun 4:00 PM-12:00 AM", "046 9549500", "Enfield", "Meath", 4, "image8.jpg"),
+            new Restaurant(9,"Street Side Cafe", "Cafe", "cheap", "Main Street, Enfield, Meath", "Mon-Sun 8:00 AM- 6:00 PM", "046 954750", "Enfield", "Meath", 3.7, "image9.jpg"),
+            new Restaurant(10,"The Bridge House", "European", "average", "Main Street, Enfield, Meath", "Mon-Sat 11:00 AM-8:30 PM", "046 9541127", "Enfield", "Meath", 3.1, "image10.jpg"),
+            new Restaurant(11,"Ocean Palace Chinese", "Chinese", "cheap", "Unit 8A Blackcastle SC, Navan, Meath", "Mon-Fri 17:00 PM-1:00 AM", "046 9027690", "Navan", "Meath", 3.8, "image11.jpg"),
+            new Restaurant(12,"Valley Cafe", "Cafe", "cheap", "43 Watergate Street Navan", "Mon-Fri 11:00 AM- 7:00 PM", "046 9021322", "Navan", "Meath", 4.3, "image12.jpg"),
+
 
 
 
