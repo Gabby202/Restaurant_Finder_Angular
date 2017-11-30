@@ -1,7 +1,13 @@
 <div class="container">
   <div *ngFor="let r of restaurants">
-    <div *ngIf="r.name == 'this.name'">
+    <div *ngIf = "r.id == this.id">
       <osl-restaurant-item [restaurant]="r"></osl-restaurant-item>
+    </div>
+  </div>
+
+  <div class = "review">
+    <div class = "col-lg-6">
+        <h1>Reviews</h1>
     </div>
   </div>
 
