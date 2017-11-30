@@ -11,15 +11,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var restaurant_service_1 = require('../restaurant-service/restaurant-service');
 var router_1 = require('@angular/router');
+var review_service_1 = require('../review-service/review-service');
 var RestaurantDetailsComponent = (function () {
     function RestaurantDetailsComponent(route) {
         this.route = route;
         this.restaurants = [];
+        this.reviews = [];
+        this.tempReviews = [];
         var restaurantService = new restaurant_service_1.RestaurantService();
         this.restaurants = restaurantService.getRestaurants();
+        var reviewService = new review_service_1.ReviewService();
+        this.reviews = reviewService.getReviews();
     }
+    RestaurantDetailsComponent.prototype.write = function () {
+        this.tempReviews.push(new review_service_1.Review(0, "doiwj", "eownc", 2));
+    };
     RestaurantDetailsComponent.prototype.ngOnInit = function () {
         var _this = this;
+        for (var i = 0; i < this.reviews.length; i++) {
+            if (this.reviews[i].id == 0) {
+                this.tempReviews.push(this.reviews[i]);
+            }
+        }
         this.sub = this.route.params.subscribe(function (params) {
             _this.id = params['id']; // (+) converts string 'id' to a number
             console.log('' + _this.id);
