@@ -22,11 +22,6 @@ export class RestaurantService {
             new Restaurant(12,"Valley Cafe", "Cafe", "cheap", "43 Watergate Street Navan", "Mon-Fri 11:00 AM- 7:00 PM", "046 9021322", "Navan", "Meath", 4.3, "image12.jpg"),
 
 
-
-
-
-
-
         ];
         return restaurants;
     }

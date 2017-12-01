@@ -7,6 +7,12 @@
       </div>
     </div>
 
+    <div class = "menu">
+      <div class = "col-lg-10">
+        <h1>Menu</h1>
+      </div>
+    </div>
+
     <div class = "review">
       <div class = "col-lg-6">
           <div class = "user-reviews">
@@ -21,8 +27,14 @@
         <div class = "col-lg-6">
             <div class = "user-reviews">
               <h1 >Review</h1>
-              <input type= "#text" placeholder="Input string..." #input>
-              <button (click)= "write()">Submit</button>
+              <div class = "inputs">
+                <input type= "#text" placeholder="Name" #input1>
+                <input type= "#text" placeholder="Comment" #input2>
+                <input type= "number" placeholder="Rating" #input3>
+              </div>
+              <div>
+                <button (click)= "write(input1.value, input2.value, input3.value)">Submit</button>
+              </div>
             </div>
           </div>
     </div>

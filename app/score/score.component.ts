@@ -11,17 +11,17 @@ export default class ScoreComponent implements OnInit{
   @Input() score: number;
   starsEmpty: boolean[] = [];
   ngOnInit() {
-    if(this.score == 1) {
+    if(this.score < 2) {
       this.starsEmpty.push(false, true, true, true, true);
 
-    } else if(this.score == 2){
+    } else if(this.score < 3){
       this.starsEmpty.push(false, false, true, true, true);
 
-    } else if(this.score == 3) {
+    } else if(this.score < 4) {
       this.starsEmpty.push(false, false, false, true, true);
-    } else if(this.score == 4) {
+    } else if(this.score < 5) {
       this.starsEmpty.push(false, false, false, false, true);
-    } else if(this.score == 5) {
+    } else if(this.score < 6) {
       this.starsEmpty.push(false, false, false, false, false);
     }
   }

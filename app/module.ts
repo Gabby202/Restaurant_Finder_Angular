@@ -16,7 +16,6 @@ import RestaurantDetailsComponent from './restaurant-details/restaurant-details.
 import ReviewComponent from './review/review.component'
 import ReviewItemComponent from './review-item/review-item.component';
 
-
 @NgModule({
     imports: [BrowserModule,
       RouterModule.forRoot([

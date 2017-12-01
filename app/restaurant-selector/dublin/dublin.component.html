@@ -37,17 +37,16 @@
 		</select>
 	</div>
 </div>
-<div>City: {{cityFilter}} </div>
-<div>Food-Type: {{foodFilter}}</div>
-<div>Price: {{priceFilter}}</div>
-<button (click) = "displayArray();">Display array to console</button>
-<button (click) = "remove();">splice last element</button>
-<button (click) = "clear();">Clear all filters</button>
+
 
 
 <div class="container">
 
-		<div *ngFor="let r of filteredRestaurants">
+	<div *ngIf="tempRestaurants.length ==0">
+		<h1>Please Choose An Option!</h1>
+	</div>
+		<div *ngFor="let r of tempRestaurants">
+
 			<div *ngIf="r.county == 'Dublin'">
 				<osl-restaurant-item [restaurant]="r"></osl-restaurant-item>
 			</div>

@@ -3,7 +3,7 @@
 
   overflow-y: auto;
   overflow-x: hidden;
-  height: 100vh;
+  height: 70vh;
   width: 100%;
   border-style: solid;
   border-radius: 10px;
@@ -16,4 +16,22 @@
 
 .user-reviews{
   width:100%;
+}
+
+.inputs {
+  width:100%;
+}
+.inputs input {
+  width:100%;
+}
+.menu{
+
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 50vh;
+  width: 100%;
+  border-style: solid;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

@@ -28,8 +28,8 @@ export default class RestaurantDetailsComponent implements OnInit{
     this.reviews =  reviewService.getReviews();
   }
 
-  write():void {
-    this.reviews.push(new Review(this.id, "doiwj", "eownc", 2));
+  write(name:string, comment:string, rating:number):void {
+    this.reviews.push(new Review(this.id, name, comment, rating));
   }
 
 

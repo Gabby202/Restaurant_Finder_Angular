@@ -23,11 +23,11 @@ var DublinComponent = (function () {
         this.priceFilter = "";
     }
     DublinComponent.prototype.ngOnInit = function () {
-        for (var i = 0; i < this.restaurants.length; i++) {
-            if (this.restaurants[i].county == "Dublin") {
-                this.filteredRestaurants.push(this.restaurants[i]);
+        /*  for(var i = 0; i < this.restaurants.length; i++) {
+            if(this.restaurants[i].county == "Dublin") {
+              this.filteredRestaurants.push(this.restaurants[i]);
             }
-        }
+          }*/
     };
     //city id = 1, food = 2 etc...
     DublinComponent.prototype.filter = function (value, id) {
@@ -42,6 +42,14 @@ var DublinComponent = (function () {
                     this.tempRestaurants.push(this.restaurants[i]);
                 }
             }
+            //remove items that arent part of filters
+            for (var k = this.tempRestaurants.length - 1; k >= 0; k--) {
+                console.log("index: " + k);
+                if (this.tempRestaurants[k].city != value) {
+                    console.log("Spliced: " + this.tempRestaurants[k].name);
+                    this.tempRestaurants.splice(k, 1);
+                }
+            }
         }
         else if (id == 2) {
             this.foodFilter = value;
@@ -53,11 +61,19 @@ var DublinComponent = (function () {
                     this.tempRestaurants.push(this.restaurants[i]);
                 }
             }
+            //remove items that arent part of filters
+            for (var k = this.tempRestaurants.length - 1; k >= 0; k--) {
+                console.log("index: " + k);
+                if (this.tempRestaurants[k].category != value) {
+                    console.log("Spliced: " + this.tempRestaurants[k].name);
+                    this.tempRestaurants.splice(k, 1);
+                }
+            }
         }
         else if (id == 3) {
             this.priceFilter = value;
         }
-        this.displayRestaurants(this.cityFilter, this.foodFilter, this.priceFilter);
+        //this.displayRestaurants(this.cityFilter, this.foodFilter, this.priceFilter);
     };
     DublinComponent.prototype.displayRestaurants = function (city, food, price) {
         this.filteredRestaurants.length = 0;
