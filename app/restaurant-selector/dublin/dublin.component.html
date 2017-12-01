@@ -1,18 +1,18 @@
 
 
 <div class = "row">
-	<div class = "col-md-3">
+	<div class = "col-md-4">
 		<select (change)="filter($event.target.value, 1)" class= "selectpicker">
-			 <option>Select City</option>
+			 <option>City</option>
 		    <option>Blanchardstown</option>
 		    <option>Howth</option>
 		    <option>Lucan</option>
 		</select>
 	</div>
 
-	<div class = "col-md-3">
+	<div class = "col-md-4">
 		<select (change)="filter($event.target.value, 2)" class= "selectpicker">
-			 <option>Select Food</option>
+			 <option>Food Type</option>
 		    <option>Seafood</option>
 		    <option>Grill</option>
 		    <option>Italian</option>
@@ -20,22 +20,16 @@
 	</div>
 
 
-	<div class = "col-md-3">
+	<div class = "col-md-4">
 		<select (change)="filter($event.target.value, 3)" class= "selectpicker">
-			 <option>Select Price</option>
+			 <option>Price Range</option>
 		    <option>Cheap</option>
 		    <option>Average</option>
 		    <option>Expensive</option>
 		</select>
 	</div>
 
-	<div class = "col-md-3">
-		<select (change)="filter($event.target.value)" class= "selectpicker">
-			 <option>Select Rating</option>
-		    <option>Low to High</option>
-		    <option>High to Low</option>
-		</select>
-	</div>
+
 </div>
 
 

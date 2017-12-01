@@ -17,33 +17,38 @@ export default class DublinComponent implements OnInit{
     cityFilter: string;
     foodFilter: string;
     priceFilter: string;
-
+    scoreFilter: number;
     constructor() {
         let restaurantService = new RestaurantService();
         this.restaurants = restaurantService.getRestaurants();
         this.cityFilter = "";
         this.foodFilter = "";
         this.priceFilter = "";
-
     }
 
     ngOnInit() {
-    /*  for(var i = 0; i < this.restaurants.length; i++) {
+      for(var i = 0; i < this.restaurants.length; i++) {
         if(this.restaurants[i].county == "Dublin") {
-          this.filteredRestaurants.push(this.restaurants[i]);
+          this.tempRestaurants.push(this.restaurants[i]);
         }
-      }*/
+      }
     }
 
     //city id = 1, food = 2 etc...
     filter(value: string, id:number): void {
       //================ city filter was added ========================================
+
+
       if(id == 1) {
+
+        //stop duplicates
+        this.tempRestaurants.length = 0;
         this.cityFilter = value;
         this.filterArray.push(value);
         console.log(value);
         for(var i = 0; i<this.restaurants.length; i++){
           if(this.restaurants[i].city == value) {
+
             console.log("Added: " +this.restaurants[i].name);
               this.tempRestaurants.push(this.restaurants[i]);
 
@@ -59,8 +64,8 @@ export default class DublinComponent implements OnInit{
         }
         //====================== food filter was added =======================================
       } else if (id == 2) {
+      this.tempRestaurants.length = 0;
         this.foodFilter = value;
-
         this.filterArray.push(value);
         console.log(value);
         for(var i = 0; i<this.restaurants.length; i++){
@@ -80,7 +85,46 @@ export default class DublinComponent implements OnInit{
         }
         //=================== price filter was added ======================================
       } else if (id == 3) {
+        this.tempRestaurants.length = 0;
         this.priceFilter = value;
+        this.filterArray.push(value);
+        console.log(value);
+        for(var i = 0; i<this.restaurants.length; i++){
+          if(this.restaurants[i].price == value) {
+            console.log("Added: " +this.restaurants[i].name);
+              this.tempRestaurants.push(this.restaurants[i]);
+
+          }
+        }
+        //remove items that arent part of filters
+        for(var k = this.tempRestaurants.length-1; k>=0; k--){
+          console.log("index: " + k);
+          if(this.tempRestaurants[k].price != value) {
+              console.log("Spliced: " +this.tempRestaurants[k].name);
+              this.tempRestaurants.splice(k, 1);
+          }
+        }
+      } else if (id == 4) {
+        this.tempRestaurants.length = 0;
+
+        this.scoreFilter = value;
+        this.filterArray.push(value);
+        console.log(value);
+        for(var i = 0; i<this.restaurants.length; i++){
+          if(this.restaurants[i].score >= value) {
+            console.log("Added: " +this.restaurants[i].name);
+              this.tempRestaurants.push(this.restaurants[i]);
+
+          }
+        }
+        //remove items that arent part of filters
+        for(var k = this.tempRestaurants.length-1; k>=0; k--){
+          console.log("index: " + k);
+          if(this.tempRestaurants[k].score != value) {
+              console.log("Spliced: " +this.tempRestaurants[k].name);
+              this.tempRestaurants.splice(k, 1);
+          }
+        }
       }
 
       //this.displayRestaurants(this.cityFilter, this.foodFilter, this.priceFilter);

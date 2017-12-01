@@ -2,8 +2,9 @@
   <div class = "col-lg-10">
     <div *ngFor="let r of restaurants">
       <div *ngIf = "r.id == this.id">
-        <osl-restaurant-item [restaurant]="r"></osl-restaurant-item>
 
+        <a routerLink = "/dublin"><h2><< Back to Restaurants..</h2></a>
+        <osl-restaurant-item [restaurant]="r"></osl-restaurant-item>
       </div>
     </div>
 
