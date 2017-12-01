@@ -15,9 +15,9 @@ var ReviewService = (function () {
     ReviewService.prototype.getReviews = function () {
         var reviews = [
             new Review(0, "Alice Smith", "Very nice food!!", 3),
-            new Review(0, "Caron Armbruster", "Very nice food!!", 2),
-            new Review(0, "Dennis Persaud", "Very nice food!!", 5),
-            new Review(0, "Erminia Wharton", "Very nice food!!", 3),
+            new Review(1, "Caron Armbruster", "Very nice food!!", 2),
+            new Review(2, "Dennis Persaud", "Very nice food!!", 5),
+            new Review(3, "Erminia Wharton", "Very nice food!!", 3),
             new Review(4, "Jenna Scot", "Very nice food!!", 1),
             new Review(5, "Tarra Rowles", "Very nice food!!", 2),
             new Review(6, "Kevin Jusino", "Very nice food!!", 2),

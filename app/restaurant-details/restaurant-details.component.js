@@ -24,7 +24,7 @@ var RestaurantDetailsComponent = (function () {
         this.reviews = reviewService.getReviews();
     }
     RestaurantDetailsComponent.prototype.write = function () {
-        this.tempReviews.push(new review_service_1.Review(0, "doiwj", "eownc", 2));
+        this.reviews.push(new review_service_1.Review(this.id, "doiwj", "eownc", 2));
     };
     RestaurantDetailsComponent.prototype.ngOnInit = function () {
         var _this = this;

@@ -11,7 +11,7 @@
       <div class = "col-lg-6">
           <div class = "user-reviews">
             <h1 >Customer Reviews</h1>
-            <div *ngFor="let p of tempReviews">
+            <div *ngFor="let p of reviews">
               <div *ngIf = "p.id == this.id">
                 <osl-review-item [review]="p"></osl-review-item>
               </div>

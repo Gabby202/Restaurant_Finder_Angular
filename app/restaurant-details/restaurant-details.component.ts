@@ -29,7 +29,7 @@ export default class RestaurantDetailsComponent implements OnInit{
   }
 
   write():void {
-    this.tempReviews.push(new Review(0, "doiwj", "eownc", 2));
+    this.reviews.push(new Review(this.id, "doiwj", "eownc", 2));
   }
 
 

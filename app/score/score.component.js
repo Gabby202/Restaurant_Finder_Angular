@@ -14,8 +14,20 @@ var ScoreComponent = (function () {
         this.starsEmpty = [];
     }
     ScoreComponent.prototype.ngOnInit = function () {
-        if (this.score > 3) {
+        if (this.score == 1) {
+            this.starsEmpty.push(false, true, true, true, true);
+        }
+        else if (this.score == 2) {
+            this.starsEmpty.push(false, false, true, true, true);
+        }
+        else if (this.score == 3) {
             this.starsEmpty.push(false, false, false, true, true);
+        }
+        else if (this.score == 4) {
+            this.starsEmpty.push(false, false, false, false, true);
+        }
+        else if (this.score == 5) {
+            this.starsEmpty.push(false, false, false, false, false);
         }
     };
     __decorate([
