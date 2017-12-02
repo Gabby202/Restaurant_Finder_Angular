@@ -12,9 +12,9 @@
     position: sticky;
     overflow: hidden;
 
-    height: 80px;
+    height: 8-px;
     width: 100%;
-    background-color: gray;
-    color: white;
+    background-color: white;
+    color: gray;
     text-align: center;
 }

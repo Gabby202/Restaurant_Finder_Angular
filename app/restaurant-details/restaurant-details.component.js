@@ -38,6 +38,7 @@ var RestaurantDetailsComponent = (function () {
             console.log('' + _this.id);
             // In a real app: dispatch action to load the details here.
         });
+        this.imgUrl = 'app/images/menus/' + this.id + '.jpg';
     };
     RestaurantDetailsComponent = __decorate([
         core_1.Component({

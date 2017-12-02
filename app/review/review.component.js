@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var review_tracker_service_1 = require('../review-tracker-service/review-tracker-service');
+//import {Film} from '../film-service/film-service';
 var Config = (function () {
     function Config(brief, type) {
         this.brief = brief;
