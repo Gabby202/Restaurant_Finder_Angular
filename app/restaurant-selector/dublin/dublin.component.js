@@ -95,11 +95,19 @@ var DublinComponent = (function () {
         }
         else if (id == 4) {
             this.tempRestaurants.length = 0;
-            this.scoreFilter = value;
+            if (value == "5") {
+                this.scoreFilter = 5;
+            }
+            else if (value == "3") {
+                this.scoreFilter = 3;
+            }
+            else if (value == "1") {
+                this.scoreFilter = 1;
+            }
             this.filterArray.push(value);
             console.log(value);
             for (var i = 0; i < this.restaurants.length; i++) {
-                if (this.restaurants[i].score >= value) {
+                if (this.restaurants[i].score >= this.scoreFilter) {
                     console.log("Added: " + this.restaurants[i].name);
                     this.tempRestaurants.push(this.restaurants[i]);
                 }
@@ -107,7 +115,7 @@ var DublinComponent = (function () {
             //remove items that arent part of filters
             for (var k = this.tempRestaurants.length - 1; k >= 0; k--) {
                 console.log("index: " + k);
-                if (this.tempRestaurants[k].score != value) {
+                if (this.tempRestaurants[k].score != this.scoreFilter) {
                     console.log("Spliced: " + this.tempRestaurants[k].name);
                     this.tempRestaurants.splice(k, 1);
                 }

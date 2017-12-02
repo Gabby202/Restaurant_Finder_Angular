@@ -15,7 +15,9 @@ import HomeComponent from './home/home.component';
 import RestaurantDetailsComponent from './restaurant-details/restaurant-details.component';
 import ReviewComponent from './review/review.component'
 import ReviewItemComponent from './review-item/review-item.component';
-
+import TopRatedComponent from './top-rated/top-rated.component';
+import QuisineComponent from './quisine/quisine.component';
+import SearchComponent from './search/search.component';
 @NgModule({
     imports: [BrowserModule,
       RouterModule.forRoot([
@@ -25,12 +27,16 @@ import ReviewItemComponent from './review-item/review-item.component';
             { path: 'meath', component: MeathComponent },
             { path: 'kildare', component: KildareComponent },
             { path: 'restaurant-details/:id', component: RestaurantDetailsComponent},
+            { path: 'top-rated', component: TopRatedComponent},
+            { path: 'quisine', component: QuisineComponent},
+            { path: 'search/:name', component: SearchComponent},
+
             { path: '**', component: HomeComponent }
 
 
 
         ])],
-    declarations: [ApplicationComponent, MenubarComponent, FooterComponent, CitySelectorComponent, CountySelectorComponent, DublinComponent, MeathComponent, KildareComponent, RestaurantItemComponent, ScoreComponent, HomeComponent, RestaurantDetailsComponent, ReviewComponent, ReviewItemComponent],
+    declarations: [ApplicationComponent, MenubarComponent, FooterComponent, CitySelectorComponent, CountySelectorComponent, DublinComponent, MeathComponent, KildareComponent, RestaurantItemComponent, ScoreComponent, HomeComponent, RestaurantDetailsComponent, ReviewComponent, ReviewItemComponent, TopRatedComponent, QuisineComponent, SearchComponent],
     bootstrap: [ApplicationComponent]
 })
 export default class AppModule {}

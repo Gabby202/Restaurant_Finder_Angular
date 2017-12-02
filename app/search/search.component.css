@@ -1,0 +1,13 @@
+.container {
+  background-color: #9999ff;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: auto;
+  height:73vh; /*vh is heingt of window*/
+  border-radius: 10px;
+  border: 2px solid #6600cc;
+}
+
+h1 {
+  color:white;
+}

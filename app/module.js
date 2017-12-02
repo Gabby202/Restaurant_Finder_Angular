@@ -25,6 +25,9 @@ var home_component_1 = require('./home/home.component');
 var restaurant_details_component_1 = require('./restaurant-details/restaurant-details.component');
 var review_component_1 = require('./review/review.component');
 var review_item_component_1 = require('./review-item/review-item.component');
+var top_rated_component_1 = require('./top-rated/top-rated.component');
+var quisine_component_1 = require('./quisine/quisine.component');
+var search_component_1 = require('./search/search.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -38,9 +41,12 @@ var AppModule = (function () {
                     { path: 'meath', component: meath_component_1.default },
                     { path: 'kildare', component: kildare_component_1.default },
                     { path: 'restaurant-details/:id', component: restaurant_details_component_1.default },
+                    { path: 'top-rated', component: top_rated_component_1.default },
+                    { path: 'quisine', component: quisine_component_1.default },
+                    { path: 'search/:name', component: search_component_1.default },
                     { path: '**', component: home_component_1.default }
                 ])],
-            declarations: [application_component_1.default, menubar_component_1.default, footer_component_1.default, city_selector_component_1.default, restaurant_selector_component_1.default, dublin_component_1.default, meath_component_1.default, kildare_component_1.default, restaurant_item_component_1.default, score_component_1.default, home_component_1.default, restaurant_details_component_1.default, review_component_1.default, review_item_component_1.default],
+            declarations: [application_component_1.default, menubar_component_1.default, footer_component_1.default, city_selector_component_1.default, restaurant_selector_component_1.default, dublin_component_1.default, meath_component_1.default, kildare_component_1.default, restaurant_item_component_1.default, score_component_1.default, home_component_1.default, restaurant_details_component_1.default, review_component_1.default, review_item_component_1.default, top_rated_component_1.default, quisine_component_1.default, search_component_1.default],
             bootstrap: [application_component_1.default]
         }), 
         __metadata('design:paramtypes', [])

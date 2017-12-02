@@ -1,0 +1,15 @@
+
+
+<ul class="nav nav-tabs">
+  <li ><a routerLink="/home">Counties</a></li>
+  <li class="active"><a routerLink = "/top-rated">Top Rated</a></li>
+  <li><a routerLink = "/quisine">Restaurants By Quisine</a></li>
+</ul>
+<div class="container">
+  <h1>Top Rated Restaurants</h1>
+  <div *ngFor="let r of restaurants">
+    <div *ngIf="r.score > 3">
+      <osl-restaurant-item [restaurant]="r"></osl-restaurant-item>
+    </div>
+  </div>
+</div>

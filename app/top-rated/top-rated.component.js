@@ -9,23 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var MenubarComponent = (function () {
-    function MenubarComponent() {
+var restaurant_service_1 = require('../restaurant-service/restaurant-service');
+var TopRatedComponent = (function () {
+    function TopRatedComponent() {
+        this.restaurants = [];
+        this.tempRestaurants = [];
+        var restaurantService = new restaurant_service_1.RestaurantService();
+        this.restaurants = restaurantService.getRestaurants();
     }
-    MenubarComponent.prototype.search = function (search) {
-        console.log("New Search: " + search);
-        this.name = search;
-    };
-    MenubarComponent = __decorate([
+    TopRatedComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'menubar',
-            templateUrl: 'menubar.component.html'
+            selector: 'top-rated',
+            templateUrl: 'top-rated.component.html',
+            styleUrls: ['top-rated.component.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], MenubarComponent);
-    return MenubarComponent;
+    ], TopRatedComponent);
+    return TopRatedComponent;
 }());
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = MenubarComponent;
-//# sourceMappingURL=menubar.component.js.map
+exports.default = TopRatedComponent;
+//# sourceMappingURL=top-rated.component.js.map

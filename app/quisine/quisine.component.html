@@ -1,0 +1,24 @@
+<ul class="nav nav-tabs">
+  <li ><a routerLink = "/home" >Counties</a></li>
+  <li><a routerLink = "/top-rated">Top Rated</a></li>
+  <li class="active"><a routerLink = "/quisine">Restaurants By Quisine</a></li>
+</ul>
+<div class = "row">
+  <div class = "col-md-4">
+    <select (change)="filter($event.target.value, 2)" class= "selectpicker">
+       <option>Food Type</option>
+        <option>Seafood</option>
+        <option>Grill</option>
+        <option>Italian</option>
+    </select>
+  </div>
+
+</div>
+<div class="container">
+  <div *ngIf="tempRestaurants.length == 0">
+		<h1>Please Choose An Option!</h1>
+	</div>
+  <div *ngFor="let r of tempRestaurants">
+      <osl-restaurant-item [restaurant]="r"></osl-restaurant-item>
+  </div>
+</div>
