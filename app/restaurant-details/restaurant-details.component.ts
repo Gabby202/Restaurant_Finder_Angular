@@ -4,6 +4,7 @@ import {ActivatedRoute} from '@angular/router';
 
 
 
+
 @Component({
     moduleId:     module.id,
     selector:    'restaurant-details',

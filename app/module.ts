@@ -13,11 +13,21 @@ import KildareComponent from './restaurant-selector/kildare/kildare.component';
 import ScoreComponent from './score/score.component';
 import HomeComponent from './home/home.component';
 import RestaurantDetailsComponent from './restaurant-details/restaurant-details.component';
-import ReviewComponent from './review/review.component'
+import MapComponent from './map/map.component';
+
+import { AgmCoreModule } from 'angular2-google-maps/core';
+
+
+const googleMapsCore = AgmCoreModule.forRoot({
+   //'angular2-google-maps':   'https://npmcdn.com/angular2-google-maps@0.12.0',
+  apiKey : 'AIzaSyBA_CtL7dZ4MCTPg1WdnAksqPWZaz5eQ80'
+});
 
 
 @NgModule({
-    imports: [BrowserModule,
+    imports: [BrowserModule,AgmCoreModule.forRoot({
+      apiKey : 'AIzaSyBA_CtL7dZ4MCTPg1WdnAksqPWZaz5eQ80'
+    }),
       RouterModule.forRoot([
             { path: '', component: HomeComponent },
             { path: 'home', component: HomeComponent },
@@ -25,12 +35,14 @@ import ReviewComponent from './review/review.component'
             { path: 'meath', component: MeathComponent },
             { path: 'kildare', component: KildareComponent },
             { path: 'restaurant-details/:id', component: RestaurantDetailsComponent},
-            { path: '**', component: HomeComponent }
+            { path: 'map', component: MapComponent },
+            { path: '**', component: HomeComponent },
+
 
 
 
         ])],
-    declarations: [ApplicationComponent, MenubarComponent, FooterComponent, CitySelectorComponent, CountySelectorComponent, DublinComponent, MeathComponent, KildareComponent, RestaurantItemComponent, ScoreComponent, HomeComponent, RestaurantDetailsComponent, ReviewComponent],
+    declarations: [ApplicationComponent, MenubarComponent, FooterComponent, CitySelectorComponent, CountySelectorComponent, DublinComponent, MeathComponent, KildareComponent, RestaurantItemComponent, ScoreComponent, HomeComponent, RestaurantDetailsComponent, MapComponent],
     bootstrap: [ApplicationComponent]
 })
 export default class AppModule {}

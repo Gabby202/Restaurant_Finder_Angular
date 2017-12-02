@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {ReviewService} from '../review-tracker-service/review-tracker-service';
-import {Film} from '../film-service/film-service';
+//import {Film} from '../film-service/film-service';
 class Config {
     constructor(public brief: string, public type: boolean) {}
 }

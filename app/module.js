@@ -23,13 +23,20 @@ var kildare_component_1 = require('./restaurant-selector/kildare/kildare.compone
 var score_component_1 = require('./score/score.component');
 var home_component_1 = require('./home/home.component');
 var restaurant_details_component_1 = require('./restaurant-details/restaurant-details.component');
-var review_component_1 = require('./review/review.component');
+var map_component_1 = require('./map/map.component');
+var core_2 = require('angular2-google-maps/core');
+var googleMapsCore = core_2.AgmCoreModule.forRoot({
+    //'angular2-google-maps':   'https://npmcdn.com/angular2-google-maps@0.12.0',
+    apiKey: 'AIzaSyBA_CtL7dZ4MCTPg1WdnAksqPWZaz5eQ80'
+});
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule,
+            imports: [platform_browser_1.BrowserModule, core_2.AgmCoreModule.forRoot({
+                    apiKey: 'AIzaSyBA_CtL7dZ4MCTPg1WdnAksqPWZaz5eQ80'
+                }),
                 router_1.RouterModule.forRoot([
                     { path: '', component: home_component_1.default },
                     { path: 'home', component: home_component_1.default },
@@ -37,9 +44,10 @@ var AppModule = (function () {
                     { path: 'meath', component: meath_component_1.default },
                     { path: 'kildare', component: kildare_component_1.default },
                     { path: 'restaurant-details/:id', component: restaurant_details_component_1.default },
-                    { path: '**', component: home_component_1.default }
+                    { path: 'map', component: map_component_1.default },
+                    { path: '**', component: home_component_1.default },
                 ])],
-            declarations: [application_component_1.default, menubar_component_1.default, footer_component_1.default, city_selector_component_1.default, restaurant_selector_component_1.default, dublin_component_1.default, meath_component_1.default, kildare_component_1.default, restaurant_item_component_1.default, score_component_1.default, home_component_1.default, restaurant_details_component_1.default, review_component_1.default],
+            declarations: [application_component_1.default, menubar_component_1.default, footer_component_1.default, city_selector_component_1.default, restaurant_selector_component_1.default, dublin_component_1.default, meath_component_1.default, kildare_component_1.default, restaurant_item_component_1.default, score_component_1.default, home_component_1.default, restaurant_details_component_1.default, map_component_1.default],
             bootstrap: [application_component_1.default]
         }), 
         __metadata('design:paramtypes', [])
