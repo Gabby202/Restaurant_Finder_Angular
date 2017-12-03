@@ -28,16 +28,15 @@ var RestaurantDetailsComponent = (function () {
     };
     RestaurantDetailsComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this.sub = this.route.params.subscribe(function (params) {
+            _this.id = params['id'];
+            console.log('' + _this.id);
+        });
         for (var i = 0; i < this.reviews.length; i++) {
-            if (this.reviews[i].id == 0) {
+            if (this.reviews[i].id == this.id) {
                 this.tempReviews.push(this.reviews[i]);
             }
         }
-        this.sub = this.route.params.subscribe(function (params) {
-            _this.id = params['id']; // (+) converts string 'id' to a number
-            console.log('' + _this.id);
-            // In a real app: dispatch action to load the details here.
-        });
         this.imgUrl = 'app/images/menus/' + this.id + '.jpg';
     };
     RestaurantDetailsComponent = __decorate([

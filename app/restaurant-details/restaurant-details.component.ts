@@ -39,24 +39,18 @@ export default class RestaurantDetailsComponent implements OnInit{
 
 
   ngOnInit() {
+    this.sub = this.route.params.subscribe(params => {
+       this.id = params['id'];
+       console.log(''+this.id);
+    });
 
     for(var i = 0; i < this.reviews.length; i++) {
-      if(this.reviews[i].id == 0) {
+      if(this.reviews[i].id == this.id) {
         this.tempReviews.push(this.reviews[i]);
       }
-
-
-
     }
 
-    
-    this.sub = this.route.params.subscribe(params => {
-       this.id = params['id']; // (+) converts string 'id' to a number
-       console.log(''+this.id);
-       // In a real app: dispatch action to load the details here.
-    });
     this.imgUrl= 'app/images/menus/'+this.id+'.jpg';
-
 
   }
 
